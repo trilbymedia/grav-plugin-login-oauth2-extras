@@ -1,5 +1,5 @@
 name: Login OAuth2 Extras
-version: 1.0.0
+version: 2.0.0
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
@@ -27,7 +27,3 @@ form:
         0: Disabled
       validate:
         type: bool
-    text_var:
-      type: text
-      label: Text Variable
-      help: Text to add to the top of a page
