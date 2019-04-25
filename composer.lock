@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f536757824faf61a377b19297c8915aa",
+    "content-hash": "3060a466335f8bc6dfde68320145e6ac",
     "packages": [
         {
             "name": "adam-paterson/oauth2-slack",
@@ -59,6 +59,55 @@
                 "slack api"
             ],
             "time": "2017-06-20T14:43:31+00:00"
+        },
+        {
+            "name": "mrjoops/oauth2-jira",
+            "version": "v0.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrjoops/oauth2-jira.git",
+                "reference": "9c270f7a70ea13c8d844676cddf17977991cb347"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrjoops/oauth2-jira/zipball/9c270f7a70ea13c8d844676cddf17977991cb347",
+                "reference": "9c270f7a70ea13c8d844676cddf17977991cb347",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mrjoops\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Lahure",
+                    "email": "alexandre@lahu.re"
+                }
+            ],
+            "description": "Jira OAuth 2.0 support for the PHP League's OAuth 2.0 Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "jira",
+                "oauth",
+                "oauth2"
+            ],
+            "time": "2018-11-11T19:49:42+00:00"
         },
         {
             "name": "wohali/oauth2-discord-new",

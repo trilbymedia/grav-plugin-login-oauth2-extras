@@ -1,7 +1,8 @@
 {
     "require": {
         "wohali/oauth2-discord-new": "^1.0",
-        "adam-paterson/oauth2-slack": "^1.1"
+        "adam-paterson/oauth2-slack": "^1.1",
+        "mrjoops/oauth2-jira": "^0.2.4"
     },
     "replace": {
         "league/oauth2-client": "*",

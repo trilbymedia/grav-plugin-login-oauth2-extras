@@ -13,6 +13,12 @@ providers:
     client_secret: ''
     options:
       scope: ['users:read', 'users:read.email']
+  jira:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['read:jira-user']
 
 admin:
   enabled: true
@@ -30,3 +36,9 @@ admin:
       client_secret: ''
       options:
         scope: ['users:read', 'users:read.email']
+    jira:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['read:jira-user']
