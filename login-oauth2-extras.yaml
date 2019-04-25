@@ -1,0 +1,32 @@
+enabled: true
+built_in_css: true
+providers:
+  discord:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['identify', 'email']
+  slack:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['users:read', 'users:read.email']
+
+admin:
+  enabled: true
+  built_in_css: true
+  providers:
+    discord:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['identify', 'email']
+    slack:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['users:read', 'users:read.email']

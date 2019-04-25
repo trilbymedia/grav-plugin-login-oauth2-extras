@@ -1,0 +1,13 @@
+.form-oauth2 button.discord {
+    background: #7289DA;
+}
+.form-oauth2 button.discord:hover {
+    background: #687DC7;
+}
+
+.form-oauth2 button.slack {
+    background: #56B68B;
+}
+.form-oauth2 button.slack:hover {
+    background: #3D9D72;
+}

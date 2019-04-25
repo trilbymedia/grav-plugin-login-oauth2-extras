@@ -1,0 +1,33 @@
+name: Login OAuth2 Extras
+version: 1.0.0
+description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
+icon: plug
+author:
+  name: Trilby Media
+  email: hello@trilby.media
+homepage: https://github.com/trilbymedia/grav-plugin-login-oauth2-extras
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/issues
+docs: https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/blob/develop/README.md
+license: MIT
+dependencies:
+  - { name: login-oauth2, version: '~2.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: Text Variable
+      help: Text to add to the top of a page
