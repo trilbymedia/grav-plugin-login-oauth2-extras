@@ -1,6 +1,13 @@
 enabled: true
 built_in_css: true
 providers:
+  gitlab:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    domain:
+    options:
+      scope: ['read_user', 'openid']
   discord:
     enabled: false
     client_id: ''
@@ -24,6 +31,13 @@ admin:
   enabled: true
   built_in_css: true
   providers:
+    gitlab:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      domain:
+      options:
+        scope: ['read_user', 'openid']
     discord:
       enabled: false
       client_id: ''

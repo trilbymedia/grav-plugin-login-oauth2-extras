@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Wohali\\OAuth2\\Client\\' => array($vendorDir . '/wohali/oauth2-discord-new/src'),
+    'Omines\\OAuth2\\Client\\' => array($vendorDir . '/omines/oauth2-gitlab/src'),
     'Mrjoops\\OAuth2\\Client\\' => array($vendorDir . '/mrjoops/oauth2-jira/src'),
     'Grav\\Plugin\\Login\\OAuth2\\' => array($baseDir . '/classes'),
     'AdamPaterson\\OAuth2\\Client\\' => array($vendorDir . '/adam-paterson/oauth2-slack/src'),

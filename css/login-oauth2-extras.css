@@ -18,3 +18,11 @@
 .form-oauth2 button.jira:hover {
     background: #095cd7;
 }
+
+.form-oauth2 button.gitlab {
+    background: #fc6c26;
+}
+.form-oauth2 button.gitlab:hover {
+     background: #E3530D;
+}
+

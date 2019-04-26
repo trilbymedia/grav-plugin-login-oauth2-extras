@@ -11,6 +11,10 @@ class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
         array (
             'Wohali\\OAuth2\\Client\\' => 21,
         ),
+        'O' => 
+        array (
+            'Omines\\OAuth2\\Client\\' => 21,
+        ),
         'M' => 
         array (
             'Mrjoops\\OAuth2\\Client\\' => 22,
@@ -29,6 +33,10 @@ class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
         'Wohali\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/wohali/oauth2-discord-new/src',
+        ),
+        'Omines\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/omines/oauth2-gitlab/src',
         ),
         'Mrjoops\\OAuth2\\Client\\' => 
         array (
