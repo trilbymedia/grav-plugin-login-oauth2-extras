@@ -28,6 +28,11 @@ form:
       validate:
         type: bool
 
+    instructions:
+      type: display
+      markdown: true
+      description: This plugin requires [Login OAuth2](/admin/plugins/login-oauth2) to function. There are several settings that must be set in that plugin to ensure these extra providers will function (`Configuration` and `Admin`)
+
     built_in_css:
       type: toggle
       label: PLUGIN_LOGIN_OAUTH2.BUILTIN_CSS
