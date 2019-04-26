@@ -1,15 +1,15 @@
 # Login Login OAuth2 Extras Plugin
 
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
+The **Login Login OAuth2 Extras** Plugin is for [Grav CMS](http://github.com/getgrav/grav). This plugin provides extra authenticatoin providers not included in the [Login OAuth2 Plugin](http://github.com/trilbymedia/grav-plugin-login-oauth2). 
 
-The **Login Login OAuth2 Extras** Plugin is for [Grav CMS](http://github.com/getgrav/grav). OAuth2 Provider for Extras
+Currently the plugin supports the following providers:
 
-## Providers
+* **GitLab:** - https://docs.gitlab.com/ee/integration/oauth_provider.html
+* **Discord:** - https://extrasapp.com/developers/docs/topics/oauth2
+* **Slack:** - https://api.slack.com/docs/sign-in-with-slack
+* **Jira:** - https://developer.atlassian.com/server/jira/platform/oauth/
 
-* **GitLab:** https://docs.gitlab.com/ee/integration/oauth_provider.html
-* **Discord:** https://extrasapp.com/developers/docs/topics/oauth2
-* **Slack:** https://api.slack.com/docs/sign-in-with-slack
-* **Jira:** https://developer.atlassian.com/server/jira/platform/oauth/
+If you wish to add a new provider, please open a pull request against this repo.
 
 ## Installation
 
@@ -31,6 +31,13 @@ Here is the default configuration and an explanation of available options:
 enabled: true
 built_in_css: true
 providers:
+  gitlab:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    domain:
+    options:
+      scope: ['read_user', 'openid']
   discord:
     enabled: false
     client_id: ''
@@ -54,6 +61,13 @@ admin:
   enabled: true
   built_in_css: true
   providers:
+    gitlab:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      domain:
+      options:
+        scope: ['read_user', 'openid']
     discord:
       enabled: false
       client_id: ''
@@ -76,12 +90,42 @@ admin:
 
 Note that if you use the admin plugin, a file with your configuration, and named login-oauth2-extras.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 
+### OAuth2 Providers
 
-## Credits
+#### GitLab
 
-**Did you incorporate third-party code? Want to thank somebody?**
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by GitLab when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by GitLab when you register an application for OAuth2 authentication | `<string>` |
+|domain|A custom GitLab domain| `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['read_user', 'openid']` |
 
-## To Do
+#### Discord
 
-- [ ] Future plans, if any
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by Discord when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Discord when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['identify', 'email']` |
+
+#### Slack
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by Slack when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Slack when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['users:read', 'users:read.email']` |
+
+#### Jira
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['read:jira-user']` |
 
