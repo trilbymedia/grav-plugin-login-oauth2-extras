@@ -1,5 +1,5 @@
 name: Login OAuth2 Extras
-version: 1.0.0
+version: 2.0.0
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
@@ -19,7 +19,7 @@ form:
   fields:
     enabled:
       type: toggle
-      label: Plugin status
+      label: Plugin Status
       highlight: 1
       default: 0
       options:
@@ -27,7 +27,399 @@ form:
         0: Disabled
       validate:
         type: bool
-    text_var:
-      type: text
-      label: Text Variable
-      help: Text to add to the top of a page
+
+    instructions:
+      type: display
+      markdown: true
+      description: This plugin requires [Login OAuth2](/admin/plugins/login-oauth2) to function. There are several settings that must be set in that plugin to ensure these extra providers will function (`Configuration` and `Admin`)
+
+    built_in_css:
+      type: toggle
+      label: PLUGIN_LOGIN_OAUTH2.BUILTIN_CSS
+      help: PLUGIN_LOGIN_OAUTH2.BUILTIN_CSS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    gitlab:
+      type: fieldset
+      title: GitLab
+      collapsible: true
+
+      fields:
+
+        gitlab_columns:
+          type: columns
+
+          fields:
+
+            gitlab_column_left:
+              type: column
+
+              fields:
+
+                gitlab.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.gitlab.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.gitlab.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.gitlab.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.gitlab.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+                providers.gitlab.domain:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.RESTRICT_DOMAIN
+                  placeholder: https://my.gitlab.example
+
+
+            gitlab_column_right:
+              type: column
+
+              fields:
+
+                gitlab.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.gitlab.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.gitlab.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.gitlab.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.gitlab.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+                admin.providers.gitlab.domain:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.RESTRICT_DOMAIN
+                  placeholder: https://my.gitlab.example
+
+        providers.gitlab.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> GitLab OAuth2 from the official documentation](https://docs.gitlab.com/ee/integration/oauth_provider.html?target=_blank)'
+          markdown: true
+
+    discord:
+      type: fieldset
+      title: Discord
+      collapsible: true
+
+      fields:
+
+        discord_columns:
+          type: columns
+
+          fields:
+
+            discord_column_left:
+              type: column
+
+              fields:
+
+                discord.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.discord.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.discord.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.discord.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.discord.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            discord_column_right:
+              type: column
+
+              fields:
+
+                discord.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.discord.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.discord.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.discord.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.discord.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+        providers.discord.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Discord OAuth2 from the official documentation](https://extrasapp.com/developers/docs/topics/oauth2?target=_blank)'
+          markdown: true
+
+    slack:
+      type: fieldset
+      title: Slack
+      collapsible: true
+
+      fields:
+
+        slack_columns:
+          type: columns
+
+          fields:
+
+            slack_column_left:
+              type: column
+
+              fields:
+
+                slack.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.slack.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.slack.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.slack.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.slack.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            slack_column_right:
+              type: column
+
+              fields:
+
+                slack.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.slack.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.slack.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.slack.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.slack.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+        providers.slack.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Slack OAuth2 from the official documentation](https://api.slack.com/docs/sign-in-with-slack?target=_blank)'
+          markdown: true
+
+    jira:
+      type: fieldset
+      title: Jira
+      collapsible: true
+
+      fields:
+
+        jira_columns:
+          type: columns
+
+          fields:
+
+            jira_column_left:
+              type: column
+
+              fields:
+
+                jira.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.jira.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.jira.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.jira.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.jira.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            jira_column_right:
+              type: column
+
+              fields:
+
+                jira.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.jira.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.jira.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.jira.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.jira.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+        providers.jira.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Jira OAuth2 from the official documentation](https://developer.atlassian.com/server/jira/platform/oauth/?target=_blank)'
+          markdown: true

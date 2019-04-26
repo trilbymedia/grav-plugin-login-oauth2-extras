@@ -11,3 +11,18 @@
 .form-oauth2 button.slack:hover {
     background: #3D9D72;
 }
+
+.form-oauth2 button.jira {
+    background: #0747A6;
+}
+.form-oauth2 button.jira:hover {
+    background: #095cd7;
+}
+
+.form-oauth2 button.gitlab {
+    background: #fc6c26;
+}
+.form-oauth2 button.gitlab:hover {
+     background: #E3530D;
+}
+

@@ -1,34 +1,25 @@
 # Login Login OAuth2 Extras Plugin
 
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
+The **Login Login OAuth2 Extras** Plugin is for [Grav CMS](http://github.com/getgrav/grav). This plugin provides extra authenticatoin providers not included in the [Login OAuth2 Plugin](http://github.com/trilbymedia/grav-plugin-login-oauth2). 
 
-The **Login Login OAuth2 Extras** Plugin is for [Grav CMS](http://github.com/getgrav/grav). OAuth2 Provider for Extras
+Currently the plugin supports the following providers:
+
+* **GitLab:** - https://docs.gitlab.com/ee/integration/oauth_provider.html
+* **Discord:** - https://extrasapp.com/developers/docs/topics/oauth2
+* **Slack:** - https://api.slack.com/docs/sign-in-with-slack
+* **Jira:** - https://developer.atlassian.com/server/jira/platform/oauth/
+
+If you wish to add a new provider, please open a pull request against this repo.
 
 ## Installation
 
 Installing the Login Login OAuth2 Extras plugin can be done in one of two ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
-
-### GPM Installation (Preferred)
 
 The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's terminal (also called the command line).  From the root of your Grav install type:
 
     bin/gpm install login-oauth2-extras
 
 This will install the Login Login OAuth2 Extras plugin into your `/user/plugins` directory within Grav. Its files can be found under `/your/site/grav/user/plugins/login-oauth2-extras`.
-
-### Manual Installation
-
-To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the folder to `login-oauth2-extras`. You can find these files on [GitHub](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
-
-You should now have all the plugin files under
-
-    /your/site/grav/user/plugins/login-oauth2-extras
-
-> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav) and the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) to operate.
-
-### Admin Plugin
-
-If you use the admin plugin, you can install directly through the admin plugin by browsing the `Plugins` tab and clicking on the `Add` button.
 
 ## Configuration
 
@@ -38,20 +29,103 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
+built_in_css: true
+providers:
+  gitlab:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    domain:
+    options:
+      scope: ['read_user', 'openid']
+  discord:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['identify', 'email']
+  slack:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['users:read', 'users:read.email']
+  jira:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['read:jira-user']
+
+admin:
+  enabled: true
+  built_in_css: true
+  providers:
+    gitlab:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      domain:
+      options:
+        scope: ['read_user', 'openid']
+    discord:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['identify', 'email']
+    slack:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['users:read', 'users:read.email']
+    jira:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['read:jira-user']
 ```
 
 Note that if you use the admin plugin, a file with your configuration, and named login-oauth2-extras.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
 
-## Usage
+### OAuth2 Providers
 
-Discord: https://extrasapp.com/developers/docs/topics/oauth2
-Slack: https://api.slack.com/docs/sign-in-with-slack
+#### GitLab
 
-## Credits
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by GitLab when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by GitLab when you register an application for OAuth2 authentication | `<string>` |
+|domain|A custom GitLab domain| `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['read_user', 'openid']` |
 
-**Did you incorporate third-party code? Want to thank somebody?**
+#### Discord
 
-## To Do
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by Discord when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Discord when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['identify', 'email']` |
 
-- [ ] Future plans, if any
+#### Slack
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by Slack when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Slack when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['users:read', 'users:read.email']` |
+
+#### Jira
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['read:jira-user']` |
 

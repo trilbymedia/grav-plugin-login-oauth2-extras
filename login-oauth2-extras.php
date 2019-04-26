@@ -104,8 +104,6 @@ class LoginOAuth2ExtrasPlugin extends Plugin
                     $oauth2->addProvider($provider, $options);
                 }
             }
-        } else {
-            $this->grav['messages']->add('login-oauth2-extras plugin requires login-oauth2 plugin but it appears to not be installed or enabled', 'error');
         }
     }
 }

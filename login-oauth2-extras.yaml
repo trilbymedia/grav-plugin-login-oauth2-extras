@@ -1,6 +1,13 @@
 enabled: true
 built_in_css: true
 providers:
+  gitlab:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    domain:
+    options:
+      scope: ['read_user', 'openid']
   discord:
     enabled: false
     client_id: ''
@@ -13,11 +20,24 @@ providers:
     client_secret: ''
     options:
       scope: ['users:read', 'users:read.email']
+  jira:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['read:jira-user']
 
 admin:
   enabled: true
   built_in_css: true
   providers:
+    gitlab:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      domain:
+      options:
+        scope: ['read_user', 'openid']
     discord:
       enabled: false
       client_id: ''
@@ -30,3 +50,9 @@ admin:
       client_secret: ''
       options:
         scope: ['users:read', 'users:read.email']
+    jira:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['read:jira-user']
