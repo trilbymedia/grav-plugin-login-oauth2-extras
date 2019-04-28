@@ -423,3 +423,95 @@ form:
           style: vertical
           content: '[<i class="fa fa-book"></i> Jira OAuth2 from the official documentation](https://developer.atlassian.com/server/jira/platform/oauth/?target=_blank)'
           markdown: true
+
+    twitch:
+      type: fieldset
+      title: Twitch
+      collapsible: true
+
+      fields:
+
+        twitch_columns:
+          type: columns
+
+          fields:
+
+            twitch_column_left:
+              type: column
+
+              fields:
+
+                twitch.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.twitch.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.twitch.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.twitch.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.twitch.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            twitch_column_right:
+              type: column
+
+              fields:
+
+                twitch.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.twitch.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.twitch.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.twitch.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.twitch.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+        providers.twitch.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Twitch OAuth2 from the official documentation](https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/?target=_blank)'
+          markdown: true

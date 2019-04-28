@@ -26,3 +26,10 @@
      background: #E3530D;
 }
 
+.form-oauth2 button.twitch {
+    background: #6440A4;
+}
+.form-oauth2 button.twitch:hover {
+    background: #55368B;
+}
+
