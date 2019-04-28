@@ -23,6 +23,10 @@ class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
         array (
             'Grav\\Plugin\\Login\\OAuth2\\' => 25,
         ),
+        'D' => 
+        array (
+            'Depotwarehouse\\OAuth2\\Client\\Twitch\\' => 36,
+        ),
         'A' => 
         array (
             'AdamPaterson\\OAuth2\\Client\\' => 27,
@@ -45,6 +49,10 @@ class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
         'Grav\\Plugin\\Login\\OAuth2\\' => 
         array (
             0 => __DIR__ . '/../..' . '/classes',
+        ),
+        'Depotwarehouse\\OAuth2\\Client\\Twitch\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/depotwarehouse/oauth2-twitch/src',
         ),
         'AdamPaterson\\OAuth2\\Client\\' => 
         array (

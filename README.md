@@ -8,6 +8,7 @@ Currently the plugin supports the following providers:
 * **Discord:** - https://extrasapp.com/developers/docs/topics/oauth2
 * **Slack:** - https://api.slack.com/docs/sign-in-with-slack
 * **Jira:** - https://developer.atlassian.com/server/jira/platform/oauth/
+* **Twitch** - https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/
 
 If you wish to add a new provider, please open a pull request against this repo.
 
@@ -56,6 +57,12 @@ providers:
     client_secret: ''
     options:
       scope: ['read:jira-user']
+  twitch:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['user_read']
 
 admin:
   enabled: true
@@ -86,6 +93,12 @@ admin:
       client_secret: ''
       options:
         scope: ['read:jira-user']
+    twitch:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['user_read']
 ```
 
 Note that if you use the admin plugin, a file with your configuration, and named login-oauth2-extras.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
@@ -128,4 +141,13 @@ Note that if you use the admin plugin, a file with your configuration, and named
 |client_id|The **Client ID** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['read:jira-user']` |
+
+#### Twitch
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|client_id|The **Client ID** Provided by Twitch when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Twitch when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['user_read']` |
 

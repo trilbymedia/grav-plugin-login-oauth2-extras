@@ -10,5 +10,6 @@ return array(
     'Omines\\OAuth2\\Client\\' => array($vendorDir . '/omines/oauth2-gitlab/src'),
     'Mrjoops\\OAuth2\\Client\\' => array($vendorDir . '/mrjoops/oauth2-jira/src'),
     'Grav\\Plugin\\Login\\OAuth2\\' => array($baseDir . '/classes'),
+    'Depotwarehouse\\OAuth2\\Client\\Twitch\\' => array($vendorDir . '/depotwarehouse/oauth2-twitch/src'),
     'AdamPaterson\\OAuth2\\Client\\' => array($vendorDir . '/adam-paterson/oauth2-slack/src'),
 );
