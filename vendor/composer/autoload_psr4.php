@@ -7,9 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Wohali\\OAuth2\\Client\\' => array($vendorDir . '/wohali/oauth2-discord-new/src'),
+    'TheNetworg\\OAuth2\\Client\\' => array($vendorDir . '/thenetworg/oauth2-azure/src'),
     'Omines\\OAuth2\\Client\\' => array($vendorDir . '/omines/oauth2-gitlab/src'),
     'Mrjoops\\OAuth2\\Client\\' => array($vendorDir . '/mrjoops/oauth2-jira/src'),
     'Grav\\Plugin\\Login\\OAuth2\\' => array($baseDir . '/classes'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Depotwarehouse\\OAuth2\\Client\\Twitch\\' => array($vendorDir . '/depotwarehouse/oauth2-twitch/src'),
     'AdamPaterson\\OAuth2\\Client\\' => array($vendorDir . '/adam-paterson/oauth2-slack/src'),
 );
