@@ -98,6 +98,54 @@
         "description": "A Twitch provider for league/oauth2-client"
     },
     {
+        "name": "firebase/php-jwt",
+        "version": "v5.1.0",
+        "version_normalized": "5.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/firebase/php-jwt.git",
+            "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/4566062c68f76f43d44f1643f4970fe89757d4c6",
+            "reference": "4566062c68f76f43d44f1643f4970fe89757d4c6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8|^5"
+        },
+        "time": "2020-02-24T23:15:03+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Firebase\\JWT\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Neuman Vong",
+                "email": "neuman+pear@twilio.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Anant Narayanan",
+                "email": "anant@php.net",
+                "role": "Developer"
+            }
+        ],
+        "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+        "homepage": "https://github.com/firebase/php-jwt"
+    },
+    {
         "name": "mrjoops/oauth2-jira",
         "version": "v0.2.4",
         "version_normalized": "0.2.4.0",
@@ -209,6 +257,59 @@
             "gitlab",
             "oauth",
             "oauth2"
+        ]
+    },
+    {
+        "name": "thenetworg/oauth2-azure",
+        "version": "v1.4.2",
+        "version_normalized": "1.4.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/TheNetworg/oauth2-azure.git",
+            "reference": "1bd78900f8048c9493b6f27a2e4409ee62a5718a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/TheNetworg/oauth2-azure/zipball/1bd78900f8048c9493b6f27a2e4409ee62a5718a",
+            "reference": "1bd78900f8048c9493b6f27a2e4409ee62a5718a",
+            "shasum": ""
+        },
+        "require": {
+            "firebase/php-jwt": "~3.0||~4.0||~5.0",
+            "league/oauth2-client": "~2.0",
+            "php": "^5.6|^7.0"
+        },
+        "time": "2019-01-23T18:20:31+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "TheNetworg\\OAuth2\\Client\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jan Hajek",
+                "email": "jan.hajek@thenetw.org",
+                "homepage": "https://thenetw.org"
+            }
+        ],
+        "description": "Azure Active Directory OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+        "keywords": [
+            "SSO",
+            "aad",
+            "authorization",
+            "azure",
+            "azure active directory",
+            "client",
+            "microsoft",
+            "oauth",
+            "oauth2",
+            "windows azure"
         ]
     },
     {
