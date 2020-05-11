@@ -1,5 +1,5 @@
 name: Login OAuth2 Extras
-version: 2.0.1
+version: 2.1.0
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
@@ -514,4 +514,188 @@ form:
           type: display
           style: vertical
           content: '[<i class="fa fa-book"></i> Twitch OAuth2 from the official documentation](https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/?target=_blank)'
+          markdown: true
+
+    azure:
+      type: fieldset
+      title: Azure
+      collapsible: true
+
+      fields:
+
+        azure_columns:
+          type: columns
+
+          fields:
+
+            azure_column_left:
+              type: column
+
+              fields:
+
+                azure.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.azure.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.azure.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.azure.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.azure.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            azure_column_right:
+              type: column
+
+              fields:
+
+                azure.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.azure.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.azure.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.azure.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.azure.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+        providers.azure.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app). Make sure you create a client secret for the authorization code flow.'
+          markdown: true
+
+    patreon:
+      type: fieldset
+      title: Patreon
+      collapsible: true
+
+      fields:
+
+        patreon_columns:
+          type: columns
+
+          fields:
+
+            patreon_column_left:
+              type: column
+
+              fields:
+
+                patreon.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.patreon.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.patreon.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.patreon.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.patreon.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            patreon_column_right:
+              type: column
+
+              fields:
+
+                patreon.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.patreon.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.patreon.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.patreon.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.patreon.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+        providers.patreon.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Patreon OAuth2 from the official documentation](https://docs.patreon.com/#oauth?target=_blank)'
           markdown: true

@@ -32,6 +32,18 @@ providers:
     client_secret: ''
     options:
       scope: ['user_read']
+  azure:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['User.Read']
+  patreon:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['users']
 
 admin:
   enabled: true
@@ -68,3 +80,15 @@ admin:
       client_secret: ''
       options:
         scope: ['user_read']
+    azure:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['User.Read']
+    patreon:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['users']
