@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
+class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
 {
     public static $prefixLengthsPsr4 = array (
         'W' => 
@@ -25,6 +25,7 @@ class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
         ),
         'G' => 
         array (
+            'Gravure\\Patreon\\Oauth\\' => 22,
             'Grav\\Plugin\\Login\\OAuth2\\' => 25,
         ),
         'F' => 
@@ -58,6 +59,10 @@ class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
         array (
             0 => __DIR__ . '/..' . '/mrjoops/oauth2-jira/src',
         ),
+        'Gravure\\Patreon\\Oauth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gravure/oauth2-patreon/src',
+        ),
         'Grav\\Plugin\\Login\\OAuth2\\' => 
         array (
             0 => __DIR__ . '/../..' . '/classes',
@@ -79,8 +84,8 @@ class ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2bc173dc5f62569a5dcf95d262de45bd::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

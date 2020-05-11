@@ -1,0 +1,35 @@
+{
+    "name": "gravure/oauth2-patreon",
+    "description": "Provides Patreon OAuth 2.0 support for PHP League's OAuth 2.0 Client.",
+    "keywords": [
+        "oauth2",
+        "league",
+        "patreon"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniël Klabbers",
+            "email": "daniel@klabbers.email",
+            "homepage": "http://luceos.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/gravure/oauth2-patreon/issues",
+        "source": "https://github.com/gravure/oauth2-patreon"
+    },
+    "require": {
+        "php": "5.6.* || >=7.0",
+        "league/oauth2-client": "^1.0 || ^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gravure\\Patreon\\Oauth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gravure\\Patreon\\Oauth\\Tests\\": "tests/"
+        }
+    }
+}

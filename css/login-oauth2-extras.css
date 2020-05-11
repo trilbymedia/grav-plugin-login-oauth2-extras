@@ -36,6 +36,13 @@
 .form-oauth2 button.azure {
     background: #2F2F2F;
     font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
-    font-size: 15px;
     font-weight: 600;
 }
+
+.form-oauth2 button.patreon {
+    background: #002C49;
+}
+.form-oauth2 button.patreon:hover {
+    background: #004674;
+}
+

@@ -2,6 +2,9 @@
 
 The **Login Login OAuth2 Extras** Plugin is for [Grav CMS](http://github.com/getgrav/grav). This plugin provides extra authenticatoin providers not included in the [Login OAuth2 Plugin](http://github.com/trilbymedia/grav-plugin-login-oauth2). 
 
+
+**NOTE:** Please use the same **Callback URIs** and configuration from **Login OAuth2 Plugin**.
+
 Currently the plugin supports the following providers:
 
 * **GitLab:** - https://docs.gitlab.com/ee/integration/oauth_provider.html
@@ -9,6 +12,8 @@ Currently the plugin supports the following providers:
 * **Slack:** - https://api.slack.com/docs/sign-in-with-slack
 * **Jira:** - https://developer.atlassian.com/server/jira/platform/oauth/
 * **Twitch** - https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/
+* **Azure** - https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
+* **Patreon** - https://docs.patreon.com/#oauth
 
 If you wish to add a new provider, please open a pull request against this repo.
 
@@ -63,6 +68,18 @@ providers:
     client_secret: ''
     options:
       scope: ['user_read']
+  azure:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['User.Read']
+  patreon:
+    enabled: false
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['users']
 
 admin:
   enabled: true
@@ -99,6 +116,18 @@ admin:
       client_secret: ''
       options:
         scope: ['user_read']
+    azure:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['User.Read']
+    patreon:
+      enabled: false
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['users']
 ```
 
 Note that if you use the admin plugin, a file with your configuration, and named login-oauth2-extras.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
@@ -109,7 +138,7 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 |Key                   |Description                 | Values |
 |:---------------------|:---------------------------|:-------|
-|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
 |client_id|The **Client ID** Provided by GitLab when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by GitLab when you register an application for OAuth2 authentication | `<string>` |
 |domain|A custom GitLab domain| `<string>` |
@@ -119,7 +148,7 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 |Key                   |Description                 | Values |
 |:---------------------|:---------------------------|:-------|
-|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
 |client_id|The **Client ID** Provided by Discord when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Discord when you register an application for OAuth2 authentication | `<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['identify', 'email']` |
@@ -128,7 +157,7 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 |Key                   |Description                 | Values |
 |:---------------------|:---------------------------|:-------|
-|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
 |client_id|The **Client ID** Provided by Slack when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Slack when you register an application for OAuth2 authentication | `<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['users:read', 'users:read.email']` |
@@ -137,7 +166,7 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 |Key                   |Description                 | Values |
 |:---------------------|:---------------------------|:-------|
-|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
 |client_id|The **Client ID** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Jira when you register an application for OAuth2 authentication | `<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['read:jira-user']` |
@@ -146,8 +175,26 @@ Note that if you use the admin plugin, a file with your configuration, and named
 
 |Key                   |Description                 | Values |
 |:---------------------|:---------------------------|:-------|
-|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| [default: `true`] \| `false` |
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
 |client_id|The **Client ID** Provided by Twitch when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Twitch when you register an application for OAuth2 authentication | `<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['user_read']` |
+
+#### Azure
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
+|client_id|The **Client ID** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['User.Read']` |
+
+#### Patreon
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
+|client_id|The **Client ID** Provided by Patreon when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Patreon when you register an application for OAuth2 authentication | `<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['users']` |
 
