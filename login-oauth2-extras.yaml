@@ -39,6 +39,7 @@ providers:
     client_secret: ''
     options:
       scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
+      get_groups: false
       avatar_max_size: 240
   patreon:
     enabled: false
@@ -89,6 +90,7 @@ admin:
       client_secret: ''
       options:
         scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
+        get_groups: false
         avatar_max_size: 240
     patreon:
       enabled: false

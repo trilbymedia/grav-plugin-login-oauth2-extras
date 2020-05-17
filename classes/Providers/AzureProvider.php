@@ -2,6 +2,7 @@
 namespace Grav\Plugin\Login\OAuth2\Providers;
 
 use Grav\Common\Grav;
+use GuzzleHttp\Promise;
 use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 
 class AzureProvider extends ExtraProvider
@@ -49,6 +50,12 @@ class AzureProvider extends ExtraProvider
                 'tenant' => $user->getTenantId(),
             ]
         ];
+
+        $getGroups = $this->config->get('providers.azure.options.get_groups');
+        if ($getGroups)
+        {
+            $data_user['groups'] = $this->getUserGroups($name);
+        }
 
         return $data_user;
     }
@@ -117,5 +124,63 @@ class AzureProvider extends ExtraProvider
 
         // Use a data url with a base64 encoded image since we need to provide a url for the avatar.
         return 'data:' . $photoMeta['@odata.mediaContentType'] . ';base64,' . base64_encode($photo);
+    }
+
+    public function getUserGroups($name)
+    {
+        // Get the ids to the groups a user is member of, including transitive memberships.
+        $graphUrl = 'https://graph.microsoft.com/v1.0/';
+        $memberGroupsUri = $graphUrl . 'me/getMemberGroups';
+        $body = [ 'securityEnabledOnly' => true ];
+        try
+        {
+            $groupIds = $this->provider->post($memberGroupsUri, $body, $this->token);
+        }
+        catch (IdentityProviderException $e)
+        {
+            // User might not be able to join any groups (e.g. personal Microsoft account).
+            Grav::instance()['log']->info('AzureProvider: cannot get groups for user \'' . $name .
+                '\'. Exception message: ' . $e->getMessage());
+            return array();
+        }
+
+        // Get the whole group objects for each id in parallel by abusing Guzzle promises.
+        // Implementing this kind of parallelism in the lower level oauth2-azure and oauth2-client libraries would be
+        // better, but that might take a while, so doing it this way is faster for now.
+
+        // Start the requests to Microsoft Graph.
+        $promises = array();
+        foreach ($groupIds as $groupId)
+        {
+            $groupUrl = $graphUrl . 'groups/' . $groupId;
+            $promises[$groupId] = Promise\task(
+                function () use ($groupUrl)
+                {
+                    return $this->provider->get($groupUrl, $this->token);
+                }
+            );
+        }
+
+        // Wait until all the requests complete.
+        $results = Promise\settle($promises)->wait();
+
+        // Get the actual groups or error messages from each request.
+        $groups = array();
+        foreach ($results as $groupId => $result)
+        {
+            if($result['state'] === Promise\PromiseInterface::FULFILLED)
+            {
+                $groups[$groupId] = $result['value'];
+            }
+            else
+            {
+                $message = $result['reason']->getMessage();
+                Grav::instance()['log']->error(
+                    'AzureProvider: failed to get name for group \'' . $groupId . '\'. Exception message: ' . $message);
+            }
+        }
+
+        // Extract the names from the group objects
+        return array_column($groups, 'displayName');
     }
 }

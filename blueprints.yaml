@@ -570,6 +570,18 @@ form:
                   validate:
                     type: commalist
 
+                providers.azure.options.get_groups:
+                  type: toggle
+                  label: Get groups
+                  help: Add all the groups from Azure to the users, which includes transitive memberships. This needs at least the 'GroupMember.Read.All' scope as well, which needs admin consent.
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
                 providers.azure.options.avatar_max_size:
                   type: number
                   size: x-small
@@ -622,6 +634,18 @@ form:
                   classes: fancy
                   validate:
                     type: commalist
+
+                admin.providers.azure.options.get_groups:
+                  type: toggle
+                  label: Get groups
+                  help: Add all the groups from Azure to the users, which includes transitive memberships. This needs at least the 'GroupMember.Read.All' scope as well, which needs admin consent.
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
 
                 admin.providers.azure.options.avatar_max_size:
                   type: number
