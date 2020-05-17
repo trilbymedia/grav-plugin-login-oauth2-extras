@@ -75,6 +75,7 @@ providers:
     client_secret: ''
     options:
       scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
+      avatar_max_size: 240
   patreon:
     enabled: false
     client_id: ''
@@ -124,6 +125,7 @@ admin:
       client_secret: ''
       options:
         scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
+        avatar_max_size: 240
     patreon:
       enabled: false
       client_id: ''
@@ -191,6 +193,7 @@ Note that if you use the admin plugin, a file with your configuration, and named
 |client_id|The **Client ID** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['openid', 'email', 'profile', 'offline_access', 'User.Read']` |
+|avatar_max_size|The maximum size in pixels of the avatar to store. Azure does not provide all sizes, only 48x48, 64x64, 96x96, 120x120, 240x240, 360x360, 432x432, 504x504, and 648x648. | e.g. `240` |
 
 #### Patreon
 

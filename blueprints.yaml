@@ -570,6 +570,17 @@ form:
                   validate:
                     type: commalist
 
+                providers.azure.options.avatar_max_size:
+                  type: number
+                  size: x-small
+                  append: px
+                  label: Maximum avatar size
+                  help: Azure does not provide all sizes, only certain pre-defined ones. The minimum size is 48px, the maximum 648px.
+                  validate:
+                    type: number
+                    min: 48
+                    max: 648
+
             azure_column_right:
               type: column
 
@@ -611,6 +622,17 @@ form:
                   classes: fancy
                   validate:
                     type: commalist
+
+                admin.providers.azure.options.avatar_max_size:
+                  type: number
+                  size: x-small
+                  append: px
+                  label: Maximum avatar size
+                  help: Azure does not provide all sizes, only certain pre-defined ones. The minimum size is 48px, the maximum 648px.
+                  validate:
+                    type: number
+                    min: 48
+                    max: 648
 
         providers.azure.description:
           type: display
