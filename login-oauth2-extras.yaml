@@ -34,10 +34,11 @@ providers:
       scope: ['user_read']
   azure:
     enabled: false
+    tenant: 'common'
     client_id: ''
     client_secret: ''
     options:
-      scope: ['User.Read']
+      scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
   patreon:
     enabled: false
     client_id: ''
@@ -82,10 +83,11 @@ admin:
         scope: ['user_read']
     azure:
       enabled: false
+      tenant: 'common'
       client_id: ''
       client_secret: ''
       options:
-        scope: ['User.Read']
+        scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
     patreon:
       enabled: false
       client_id: ''

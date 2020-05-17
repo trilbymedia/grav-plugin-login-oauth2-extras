@@ -70,10 +70,11 @@ providers:
       scope: ['user_read']
   azure:
     enabled: false
+    tenant: 'common'
     client_id: ''
     client_secret: ''
     options:
-      scope: ['User.Read']
+      scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
   patreon:
     enabled: false
     client_id: ''
@@ -118,10 +119,11 @@ admin:
         scope: ['user_read']
     azure:
       enabled: false
+      tenant: 'common'
       client_id: ''
       client_secret: ''
       options:
-        scope: ['User.Read']
+        scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
     patreon:
       enabled: false
       client_id: ''
@@ -185,9 +187,10 @@ Note that if you use the admin plugin, a file with your configuration, and named
 |Key                   |Description                 | Values |
 |:---------------------|:---------------------------|:-------|
 |enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
+|tenant|The **Tenant ID** of your Azure AD tenant that you want to use. Use 'common' for all users, 'organizations' for Azure AD work or school accounts, 'consumers' for personal Microsoft accounts or a tenant id for accounts from a single Azure AD tenant.|`common`, `organizations`, `consumers`, e.g. `58673e44-617a-4d61-88b5-fb480759a841`|
 |client_id|The **Client ID** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
-|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['User.Read']` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['openid', 'email', 'profile', 'offline_access', 'User.Read']` |
 
 #### Patreon
 

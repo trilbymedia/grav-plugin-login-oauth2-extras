@@ -11,6 +11,7 @@ class AzureProvider extends ExtraProvider
         $options += [
             'clientId'      => $this->config->get('providers.azure.client_id'),
             'clientSecret'  => $this->config->get('providers.azure.client_secret'),
+            'tenant'        => $this->config->get('providers.azure.tenant'),
             'redirectUri'   => $this->getCallbackUri(),
         ];
 
@@ -30,8 +31,12 @@ class AzureProvider extends ExtraProvider
         $data_user = [
             'id'         => $user->getId(),
             'login'      => $user->getUpn(),
-            'fullname'   => $user->getFirstName() . " " . $user->getLastName(),
-            'email'      => $user->getUpn()
+            'fullname'   => $user->claim('name'),
+            'email'      => $user->claim('email') ?: $user->getUpn(),
+            'azure'      => [
+                'issuer' => $user->claim('iss'),
+                'tenant' => $user->getTenantId(),
+            ]
         ];
 
         return $data_user;

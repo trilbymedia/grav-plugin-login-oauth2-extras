@@ -549,6 +549,11 @@ form:
                   validate:
                     type: bool
 
+                providers.azure.tenant:
+                  type: text
+                  label: Tenant ID
+                  help: Use 'common' for all users, 'organizations' for Azure AD work or school accounts, 'consumers' for personal Microsoft accounts or a tenant id for accounts from a single Azure AD tenant.
+
                 providers.azure.client_id:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
@@ -585,6 +590,11 @@ form:
                     0: Disabled
                   validate:
                     type: bool
+
+                admin.providers.azure.tenant:
+                  type: text
+                  label: Tenant ID
+                  help: Use 'common' for all users, 'organizations' for Azure AD work or school accounts, 'consumers' for personal Microsoft accounts or a tenant id for accounts from a single Azure AD tenant.
 
                 admin.providers.azure.client_id:
                   type: text
