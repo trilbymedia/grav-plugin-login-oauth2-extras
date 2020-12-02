@@ -1,5 +1,7 @@
 name: Login OAuth2 Extras
-version: 2.1.0
+type: plugin
+slug: login-oauth2-extras
+version: 2.1.1
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
@@ -549,6 +551,11 @@ form:
                   validate:
                     type: bool
 
+                providers.azure.tenant:
+                  type: text
+                  label: Tenant ID
+                  help: Use 'common' for all users, 'organizations' for Azure AD work or school accounts, 'consumers' for personal Microsoft accounts or a tenant id for accounts from a single Azure AD tenant.
+
                 providers.azure.client_id:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
@@ -564,6 +571,29 @@ form:
                   classes: fancy
                   validate:
                     type: commalist
+
+                providers.azure.options.get_groups:
+                  type: toggle
+                  label: Get groups
+                  help: Add all the groups from Azure to the users, which includes transitive memberships. This needs at least the 'GroupMember.Read.All' scope as well, which needs admin consent.
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.azure.options.avatar_max_size:
+                  type: number
+                  size: x-small
+                  append: px
+                  label: Maximum avatar size
+                  help: Azure does not provide all sizes, only certain pre-defined ones. The minimum size is 48px, the maximum 648px.
+                  validate:
+                    type: number
+                    min: 48
+                    max: 648
 
             azure_column_right:
               type: column
@@ -586,6 +616,11 @@ form:
                   validate:
                     type: bool
 
+                admin.providers.azure.tenant:
+                  type: text
+                  label: Tenant ID
+                  help: Use 'common' for all users, 'organizations' for Azure AD work or school accounts, 'consumers' for personal Microsoft accounts or a tenant id for accounts from a single Azure AD tenant.
+
                 admin.providers.azure.client_id:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
@@ -601,6 +636,29 @@ form:
                   classes: fancy
                   validate:
                     type: commalist
+
+                admin.providers.azure.options.get_groups:
+                  type: toggle
+                  label: Get groups
+                  help: Add all the groups from Azure to the users, which includes transitive memberships. This needs at least the 'GroupMember.Read.All' scope as well, which needs admin consent.
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.azure.options.avatar_max_size:
+                  type: number
+                  size: x-small
+                  append: px
+                  label: Maximum avatar size
+                  help: Azure does not provide all sizes, only certain pre-defined ones. The minimum size is 48px, the maximum 648px.
+                  validate:
+                    type: number
+                    min: 48
+                    max: 648
 
         providers.azure.description:
           type: display

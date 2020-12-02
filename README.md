@@ -70,10 +70,13 @@ providers:
       scope: ['user_read']
   azure:
     enabled: false
+    tenant: 'common'
     client_id: ''
     client_secret: ''
     options:
-      scope: ['User.Read']
+      scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
+      get_groups: false
+      avatar_max_size: 240
   patreon:
     enabled: false
     client_id: ''
@@ -118,10 +121,13 @@ admin:
         scope: ['user_read']
     azure:
       enabled: false
+      tenant: 'common'
       client_id: ''
       client_secret: ''
       options:
-        scope: ['User.Read']
+        scope: ['openid', 'email', 'profile', 'offline_access', 'User.Read']
+        get_groups: false
+        avatar_max_size: 240
     patreon:
       enabled: false
       client_id: ''
@@ -185,9 +191,12 @@ Note that if you use the admin plugin, a file with your configuration, and named
 |Key                   |Description                 | Values |
 |:---------------------|:---------------------------|:-------|
 |enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
+|tenant|The **Tenant ID** of your Azure AD tenant that you want to use. Use 'common' for all users, 'organizations' for Azure AD work or school accounts, 'consumers' for personal Microsoft accounts or a tenant id for accounts from a single Azure AD tenant.|`common`, `organizations`, `consumers`, e.g. `58673e44-617a-4d61-88b5-fb480759a841`|
 |client_id|The **Client ID** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Azure when you register an application for OAuth2 authentication | `<string>` |
-|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['User.Read']` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['openid', 'email', 'profile', 'offline_access', 'User.Read']` |
+|get_groups|Add all the groups from Azure to the users, which includes transitive memberships. This needs at least the `GroupMember.Read.All` scope as well, which needs admin consent. **Warning**: if you save the users the groups will only be added, but not removed.| `true` \| [default: `false`] |
+|avatar_max_size|The maximum size in pixels of the avatar to store. Azure does not provide all sizes, only 48x48, 64x64, 96x96, 120x120, 240x240, 360x360, 432x432, 504x504, and 648x648. | e.g. `240` |
 
 #### Patreon
 
