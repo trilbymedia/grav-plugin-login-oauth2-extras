@@ -15,6 +15,10 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         array (
             'TheNetworg\\OAuth2\\Client\\' => 25,
         ),
+        'S' => 
+        array (
+            'Stevenmaguire\\OAuth2\\Client\\' => 28,
+        ),
         'O' => 
         array (
             'Omines\\OAuth2\\Client\\' => 21,
@@ -51,6 +55,10 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         array (
             0 => __DIR__ . '/..' . '/thenetworg/oauth2-azure/src',
         ),
+        'Stevenmaguire\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stevenmaguire/oauth2-keycloak/src',
+        ),
         'Omines\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/omines/oauth2-gitlab/src',
@@ -81,11 +89,16 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         ),
     );
 
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$classMap;
 
         }, null, ClassLoader::class);
     }

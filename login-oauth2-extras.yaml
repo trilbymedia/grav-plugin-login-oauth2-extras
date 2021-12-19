@@ -47,6 +47,17 @@ providers:
     client_secret: ''
     options:
       scope: ['users']
+  keycloak:
+    enabled: false
+    authserver_url: ''
+    realm: ''
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['users']
+    userdata_login: ''
+    userdata_fullname: ''
+    userdata_email: ''
 
 admin:
   enabled: true
@@ -98,3 +109,14 @@ admin:
       client_secret: ''
       options:
         scope: ['users']
+    keycloak:
+      enabled: false
+      authserver_url: ''
+      realm: ''
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['users']
+      userdata_login: ''
+      userdata_fullname: ''
+      userdata_email: ''

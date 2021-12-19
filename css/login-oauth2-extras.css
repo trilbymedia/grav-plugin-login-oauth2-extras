@@ -46,3 +46,10 @@
     background: #004674;
 }
 
+.form-oauth2 button.keycloak {
+    background: #C9C9C9;
+    color: #333333;
+}
+.form-oauth2 button.keycloak:hover {
+    background: #33C6E9;
+}

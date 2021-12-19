@@ -14,6 +14,7 @@ Currently the plugin supports the following providers:
 * **Twitch** - https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/
 * **Azure** - https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 * **Patreon** - https://docs.patreon.com/#oauth
+* **Keycloak** - https://github.com/stevenmaguire/oauth2-keycloak
 
 If you wish to add a new provider, please open a pull request against this repo.
 
@@ -83,6 +84,18 @@ providers:
     client_secret: ''
     options:
       scope: ['users']
+  keycloak:
+    enabled: false
+    authserverl_url: ''
+    realm: ''
+    client_id: ''
+    client_secret: ''
+    options:
+      scope: ['users']
+    userdata_login: ''
+    userdata_fullname: ''
+    userdata_email: ''
+  
 
 admin:
   enabled: true
@@ -134,6 +147,17 @@ admin:
       client_secret: ''
       options:
         scope: ['users']
+    keycloak:
+      enabled: false
+      authserverl_url: ''
+      realm: ''
+      client_id: ''
+      client_secret: ''
+      options:
+        scope: ['users']
+      userdata_login: ''
+      userdata_fullname: ''
+      userdata_email: ''
 ```
 
 Note that if you use the admin plugin, a file with your configuration, and named login-oauth2-extras.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
@@ -206,4 +230,20 @@ Note that if you use the admin plugin, a file with your configuration, and named
 |client_id|The **Client ID** Provided by Patreon when you register an application for OAuth2 authentication | `<string>` |
 |client_secret|The **Client Secret** Provided by Patreon when you register an application for OAuth2 authentication | `<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['users']` |
+
+#### Keycloak
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+|enabled|Enable or disable this specific provider. This stops its showing as an valid login option| `true` \| [default: `false`] |
+|authserver_url| The **AuthServer URL** of your Keycloak server that you want to use. |`<string>` |
+|realm| The **Realm** of your Keycloak server that you want to use. |`<string>` |
+|client_id|The **Client ID** Provided by Keycloak when you register an application for OAuth2 authentication | `<string>` |
+|client_secret|The **Client Secret** Provided by Keycloak when you register an application for OAuth2 authentication | `<string>` |
+|encryption_algorithm| The **Encryption Algorithm** to be used, if your Keycloak instance is configured to use encryption. |`<string>` \| e.g. `RS256` |
+|encryption_key| The contents of your public key or certificate that should be used for decryption, if your Keycloak instance is configured to use encryption. |`<string>` |
+|scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['users']` |
+|userdata_login| The **Login** key of the Keycloak user data.|`<string>` |
+|userdata_fullname| The user's **full name** key of the Keycloak user data.|`<string>` \| e.g. `name` |
+|userdata_email| The user's **email address** key of the Keycloak user data.|`<string>` \| e.g. `email` |
 

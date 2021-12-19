@@ -11,6 +11,7 @@
 namespace Omines\OAuth2\Client\Test\Provider;
 
 use GuzzleHttp\ClientInterface;
+use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use Mockery as m;
 use Omines\OAuth2\Client\Provider\Gitlab;
 use Omines\OAuth2\Client\Provider\GitlabResourceOwner;
@@ -21,7 +22,7 @@ class GitlabTest extends TestCase
     /** @var Gitlab */
     protected $provider;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->provider = new \Omines\OAuth2\Client\Provider\Gitlab([
             'clientId' => 'mock_client_id',
@@ -30,7 +31,7 @@ class GitlabTest extends TestCase
         ]);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         m::close();
         parent::tearDown();
@@ -65,7 +66,7 @@ class GitlabTest extends TestCase
 
         $url = $this->provider->getAuthorizationUrl($options);
 
-        $this->assertContains(rawurlencode(implode(Gitlab::SCOPE_SEPARATOR, $options['scope'])), $url);
+        $this->assertStringContainsString(rawurlencode(implode(Gitlab::SCOPE_SEPARATOR, $options['scope'])), $url);
     }
 
     public function testGetAuthorizationUrl()
@@ -186,41 +187,6 @@ class GitlabTest extends TestCase
         $this->assertInstanceOf(\Gitlab\Client::class, $client);
     }
 
-    /* public function testUserEmails()
-    {
-
-        $userId = rand(1000,9999);
-        $name = uniqid();
-        $nickname = uniqid();
-        $email = uniqid();
-
-        $postResponse = m::mock('Psr\Http\Message\ResponseInterface');
-        $postResponse->shouldReceive('getBody')->andReturn('access_token=mock_access_token&expires=3600&refresh_token=mock_refresh_token&otherKey={1234}');
-        $postResponse->shouldReceive('getHeader')->andReturn(['content-type' => 'application/x-www-form-urlencoded']);
-
-        $userResponse = m::mock('Psr\Http\Message\ResponseInterface');
-        $userResponse->shouldReceive('getBody')->andReturn('[{"email":"mock_email_1","primary":false,"verified":true},{"email":"mock_email_2","primary":false,"verified":true},{"email":"mock_email_3","primary":true,"verified":true}]');
-        $userResponse->shouldReceive('getHeader')->andReturn(['content-type' => 'json']);
-
-        $client = m::mock('GuzzleHttp\ClientInterface');
-        $client->shouldReceive('send')
-            ->times(2)
-            ->andReturn($postResponse, $userResponse);
-        $this->provider->setHttpClient($client);
-
-        $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
-        $emails = $this->provider->getUserEmails($token);
-
-        $this->assertEquals($userId, $user->getUserId());
-        $this->assertEquals($name, $user->getName());
-        $this->assertEquals($nickname, $user->getNickname());
-        $this->assertEquals($email, $user->getEmail());
-        $this->assertContains($nickname, $user->getUrl());
-    } */
-
-    /**
-     * @expectedException \League\OAuth2\Client\Provider\Exception\IdentityProviderException
-     **/
     public function testExceptionThrownWhenErrorObjectReceived()
     {
         $status = rand(400, 600);
@@ -234,12 +200,11 @@ class GitlabTest extends TestCase
             ->times(1)
             ->andReturn($postResponse);
         $this->provider->setHttpClient($client);
+
+        $this->expectException(IdentityProviderException::class);
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
     }
 
-    /**
-     * @expectedException \League\OAuth2\Client\Provider\Exception\IdentityProviderException
-     **/
     public function testExceptionThrownWhenOAuthErrorReceived()
     {
         $status = 200;
@@ -253,6 +218,8 @@ class GitlabTest extends TestCase
             ->times(1)
             ->andReturn($postResponse);
         $this->provider->setHttpClient($client);
+
+        $this->expectException(IdentityProviderException::class);
         $token = $this->provider->getAccessToken('authorization_code', ['code' => 'mock_authorization_code']);
     }
 }
