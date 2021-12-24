@@ -86,7 +86,7 @@ providers:
       scope: ['users']
   keycloak:
     enabled: false
-    authserverl_url: ''
+    authserver_url: ''
     realm: ''
     client_id: ''
     client_secret: ''
@@ -149,7 +149,7 @@ admin:
         scope: ['users']
     keycloak:
       enabled: false
-      authserverl_url: ''
+      authserver_url: ''
       realm: ''
       client_id: ''
       client_secret: ''
