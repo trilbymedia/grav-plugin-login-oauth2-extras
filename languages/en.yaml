@@ -1,0 +1,8 @@
+PLUGIN_LOGIN_OAUTH2_EXTRAS:
+  AUTHSERVER_URL: "Keycloak server URL"
+  REALM: "Keycloak realm name"
+  ENCRYPTION_ALGORITHM: "Encryption algorithm"
+  ENCRYPTION_KEY: "Encryption key or certificate (content)"
+  USERDATA_LOGIN: "Login key"
+  USERDATA_FULLNAME: "FullName key"
+  USERDATA_EMAIL: "Email key"

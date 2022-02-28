@@ -55,6 +55,10 @@
                 "slack",
                 "slack api"
             ],
+            "support": {
+                "issues": "https://github.com/adam-paterson/oauth2-slack/issues",
+                "source": "https://github.com/adam-paterson/oauth2-slack/tree/master"
+            },
             "install-path": "../adam-paterson/oauth2-slack"
         },
         {
@@ -137,8 +141,9 @@
                 "php": "5.6.* || >=7.0"
             },
             "time": "2018-02-06T12:41:19+00:00",
+            "default-branch": true,
             "type": "library",
-            "installation-source": "source",
+            "installation-source": "dist",
             "autoload": {
                 "psr-4": {
                     "Gravure\\Patreon\\Oauth\\": "src/"
@@ -161,6 +166,10 @@
                 "oauth2",
                 "patreon"
             ],
+            "support": {
+                "issues": "https://github.com/gravure/oauth2-patreon/issues",
+                "source": "https://github.com/gravure/oauth2-patreon"
+            },
             "install-path": "../gravure/oauth2-patreon"
         },
         {
@@ -213,6 +222,10 @@
                 "oauth",
                 "oauth2"
             ],
+            "support": {
+                "issues": "https://github.com/mrjoops/oauth2-jira/issues",
+                "source": "https://github.com/mrjoops/oauth2-jira/tree/develop"
+            },
             "install-path": "../mrjoops/oauth2-jira"
         },
         {
@@ -284,6 +297,69 @@
                 "source": "https://github.com/omines/oauth2-gitlab/tree/3.4.0"
             },
             "install-path": "../omines/oauth2-gitlab"
+        },
+        {
+            "name": "stevenmaguire/oauth2-keycloak",
+            "version": "3.0.0",
+            "version_normalized": "3.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevenmaguire/oauth2-keycloak.git",
+                "reference": "645b84107b82a08cfed9c101081eb8548ea5be11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevenmaguire/oauth2-keycloak/zipball/645b84107b82a08cfed9c101081eb8548ea5be11",
+                "reference": "645b84107b82a08cfed9c101081eb8548ea5be11",
+                "shasum": ""
+            },
+            "require": {
+                "firebase/php-jwt": "~4.0|~5.0",
+                "league/oauth2-client": "^2.0 <2.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "time": "2022-01-23T18:01:00+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Stevenmaguire\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Maguire",
+                    "email": "stevenmaguire@gmail.com",
+                    "homepage": "https://github.com/stevenmaguire"
+                }
+            ],
+            "description": "Keycloak OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "keycloak",
+                "oauth",
+                "oauth2"
+            ],
+            "support": {
+                "issues": "https://github.com/stevenmaguire/oauth2-keycloak/issues",
+                "source": "https://github.com/stevenmaguire/oauth2-keycloak/tree/3.0.0"
+            },
+            "install-path": "../stevenmaguire/oauth2-keycloak"
         },
         {
             "name": "thenetworg/oauth2-azure",

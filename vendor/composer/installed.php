@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1bc0eae7f46812f2c228ddd529b35ec48741fca7',
+        'reference' => '74c6485bdfcf3f28740ac047f3db28cef02bfcf2',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1bc0eae7f46812f2c228ddd529b35ec48741fca7',
+            'reference' => '74c6485bdfcf3f28740ac047f3db28cef02bfcf2',
             'dev_requirement' => false,
         ),
         'adam-paterson/oauth2-slack' => array(
@@ -101,6 +101,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'stevenmaguire/oauth2-keycloak' => array(
+            'pretty_version' => '3.0.0',
+            'version' => '3.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../stevenmaguire/oauth2-keycloak',
+            'aliases' => array(),
+            'reference' => '645b84107b82a08cfed9c101081eb8548ea5be11',
+            'dev_requirement' => false,
         ),
         'thenetworg/oauth2-azure' => array(
             'pretty_version' => 'v1.4.0',
