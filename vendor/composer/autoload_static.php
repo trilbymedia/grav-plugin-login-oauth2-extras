@@ -11,6 +11,10 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         array (
             'Wohali\\OAuth2\\Client\\' => 21,
         ),
+        'V' => 
+        array (
+            'Vertisan\\OAuth2\\Client\\Provider\\' => 32,
+        ),
         'T' => 
         array (
             'TheNetworg\\OAuth2\\Client\\' => 25,
@@ -32,10 +36,6 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         array (
             'Firebase\\JWT\\' => 13,
         ),
-        'D' => 
-        array (
-            'Depotwarehouse\\OAuth2\\Client\\Twitch\\' => 36,
-        ),
         'A' => 
         array (
             'AdamPaterson\\OAuth2\\Client\\' => 27,
@@ -46,6 +46,10 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         'Wohali\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/wohali/oauth2-discord-new/src',
+        ),
+        'Vertisan\\OAuth2\\Client\\Provider\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vertisan/oauth2-twitch-helix/src',
         ),
         'TheNetworg\\OAuth2\\Client\\' => 
         array (
@@ -71,14 +75,14 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         array (
             0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
-        'Depotwarehouse\\OAuth2\\Client\\Twitch\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/depotwarehouse/oauth2-twitch/src',
-        ),
         'AdamPaterson\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/adam-paterson/oauth2-slack/src',
         ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -86,6 +90,7 @@ class ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit3a54b6a2474c6ba3c81f690575f70940::$classMap;
 
         }, null, ClassLoader::class);
     }

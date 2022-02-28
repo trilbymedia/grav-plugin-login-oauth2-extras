@@ -1,425 +1,475 @@
-[
-    {
-        "name": "adam-paterson/oauth2-slack",
-        "version": "1.1.3",
-        "version_normalized": "1.1.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/adam-paterson/oauth2-slack.git",
-            "reference": "ccc329eb3036a89d110227a4137e15d4a5661678"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/adam-paterson/oauth2-slack/zipball/ccc329eb3036a89d110227a4137e15d4a5661678",
-            "reference": "ccc329eb3036a89d110227a4137e15d4a5661678",
-            "shasum": ""
-        },
-        "require": {
-            "league/oauth2-client": "1.*|2.*",
-            "php": ">=5.6.0"
-        },
-        "require-dev": {
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "5.6",
-            "squizlabs/php_codesniffer": "~2.0"
-        },
-        "time": "2017-06-20T14:43:31+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "AdamPaterson\\OAuth2\\Client\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Adam Paterson",
-                "email": "hello@adampaterson.co.uk"
-            }
-        ],
-        "description": "Slack OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-        "keywords": [
-            "Authentication",
-            "SSO",
-            "authorization",
-            "identity",
-            "idp",
-            "oauth",
-            "oauth2",
-            "single sign on",
-            "slack",
-            "slack api"
-        ]
-    },
-    {
-        "name": "depotwarehouse/oauth2-twitch",
-        "version": "1.3.3",
-        "version_normalized": "1.3.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/tpavlek/oauth2-twitch.git",
-            "reference": "6334c97088bcf21bd91b6f366ea8166a0782681c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/tpavlek/oauth2-twitch/zipball/6334c97088bcf21bd91b6f366ea8166a0782681c",
-            "reference": "6334c97088bcf21bd91b6f366ea8166a0782681c",
-            "shasum": ""
-        },
-        "require": {
-            "league/oauth2-client": "^2.4"
-        },
-        "time": "2019-10-17T04:42:43+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Depotwarehouse\\OAuth2\\Client\\Twitch\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Davide Gaido",
-                "email": "davide@0plus1.com"
+{
+    "packages": [
+        {
+            "name": "adam-paterson/oauth2-slack",
+            "version": "1.1.3",
+            "version_normalized": "1.1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adam-paterson/oauth2-slack.git",
+                "reference": "ccc329eb3036a89d110227a4137e15d4a5661678"
             },
-            {
-                "name": "Troy Pavlek",
-                "email": "troy@tpavlek.me"
-            }
-        ],
-        "description": "A Twitch provider for league/oauth2-client"
-    },
-    {
-        "name": "firebase/php-jwt",
-        "version": "v5.2.0",
-        "version_normalized": "5.2.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/firebase/php-jwt.git",
-            "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
-            "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": ">=4.8 <=9"
-        },
-        "time": "2020-03-25T18:49:23+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Firebase\\JWT\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Neuman Vong",
-                "email": "neuman+pear@twilio.com",
-                "role": "Developer"
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adam-paterson/oauth2-slack/zipball/ccc329eb3036a89d110227a4137e15d4a5661678",
+                "reference": "ccc329eb3036a89d110227a4137e15d4a5661678",
+                "shasum": ""
             },
-            {
-                "name": "Anant Narayanan",
-                "email": "anant@php.net",
-                "role": "Developer"
-            }
-        ],
-        "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-        "homepage": "https://github.com/firebase/php-jwt",
-        "keywords": [
-            "jwt",
-            "php"
-        ]
-    },
-    {
-        "name": "gravure/oauth2-patreon",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/gravure/oauth2-patreon.git",
-            "reference": "32c5bb7c6cdfb0cbb4e396ca8e9cbde447f41f47"
+            "require": {
+                "league/oauth2-client": "1.*|2.*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "5.6",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "time": "2017-06-20T14:43:31+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "AdamPaterson\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Paterson",
+                    "email": "hello@adampaterson.co.uk"
+                }
+            ],
+            "description": "Slack OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "SSO",
+                "authorization",
+                "identity",
+                "idp",
+                "oauth",
+                "oauth2",
+                "single sign on",
+                "slack",
+                "slack api"
+            ],
+            "install-path": "../adam-paterson/oauth2-slack"
         },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/gravure/oauth2-patreon/zipball/32c5bb7c6cdfb0cbb4e396ca8e9cbde447f41f47",
-            "reference": "32c5bb7c6cdfb0cbb4e396ca8e9cbde447f41f47",
-            "shasum": ""
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.5.1",
+            "version_normalized": "5.5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "83b609028194aa042ea33b5af2d41a7427de80e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/83b609028194aa042ea33b5af2d41a7427de80e6",
+                "reference": "83b609028194aa042ea33b5af2d41a7427de80e6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8 <=9"
+            },
+            "suggest": {
+                "paragonie/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
+            },
+            "time": "2021-11-08T20:18:51+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/firebase/php-jwt/issues",
+                "source": "https://github.com/firebase/php-jwt/tree/v5.5.1"
+            },
+            "install-path": "../firebase/php-jwt"
         },
-        "require": {
-            "league/oauth2-client": "^1.0 || ^2.0",
-            "php": "5.6.* || >=7.0"
+        {
+            "name": "gravure/oauth2-patreon",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gravure/oauth2-patreon.git",
+                "reference": "32c5bb7c6cdfb0cbb4e396ca8e9cbde447f41f47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gravure/oauth2-patreon/zipball/32c5bb7c6cdfb0cbb4e396ca8e9cbde447f41f47",
+                "reference": "32c5bb7c6cdfb0cbb4e396ca8e9cbde447f41f47",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^1.0 || ^2.0",
+                "php": "5.6.* || >=7.0"
+            },
+            "time": "2018-02-06T12:41:19+00:00",
+            "type": "library",
+            "installation-source": "source",
+            "autoload": {
+                "psr-4": {
+                    "Gravure\\Patreon\\Oauth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                }
+            ],
+            "description": "Provides Patreon OAuth 2.0 support for PHP League's OAuth 2.0 Client.",
+            "keywords": [
+                "league",
+                "oauth2",
+                "patreon"
+            ],
+            "install-path": "../gravure/oauth2-patreon"
         },
-        "time": "2018-02-06T12:41:19+00:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-4": {
-                "Gravure\\Patreon\\Oauth\\": "src/"
-            }
+        {
+            "name": "mrjoops/oauth2-jira",
+            "version": "v0.2.4",
+            "version_normalized": "0.2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mrjoops/oauth2-jira.git",
+                "reference": "9c270f7a70ea13c8d844676cddf17977991cb347"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mrjoops/oauth2-jira/zipball/9c270f7a70ea13c8d844676cddf17977991cb347",
+                "reference": "9c270f7a70ea13c8d844676cddf17977991cb347",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^5.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "time": "2018-11-11T19:49:42+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Mrjoops\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Lahure",
+                    "email": "alexandre@lahu.re"
+                }
+            ],
+            "description": "Jira OAuth 2.0 support for the PHP League's OAuth 2.0 Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "jira",
+                "oauth",
+                "oauth2"
+            ],
+            "install-path": "../mrjoops/oauth2-jira"
         },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Daniël Klabbers",
-                "email": "daniel@klabbers.email",
-                "homepage": "http://luceos.com"
-            }
-        ],
-        "description": "Provides Patreon OAuth 2.0 support for PHP League's OAuth 2.0 Client.",
-        "keywords": [
-            "league",
-            "oauth2",
-            "patreon"
-        ]
-    },
-    {
-        "name": "mrjoops/oauth2-jira",
-        "version": "v0.2.4",
-        "version_normalized": "0.2.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mrjoops/oauth2-jira.git",
-            "reference": "9c270f7a70ea13c8d844676cddf17977991cb347"
+        {
+            "name": "omines/oauth2-gitlab",
+            "version": "3.4.0",
+            "version_normalized": "3.4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/omines/oauth2-gitlab.git",
+                "reference": "0c37361c54fae71a85350c445bda1834db5859af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/0c37361c54fae71a85350c445bda1834db5859af",
+                "reference": "0c37361c54fae71a85350c445bda1834db5859af",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.4.1",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.0",
+                "guzzlehttp/psr7": "^1.6",
+                "http-interop/http-factory-guzzle": "^1.0",
+                "m4tthumphrey/php-gitlab-api": "^10.0|^11.0",
+                "mockery/mockery": "^1.0",
+                "php-http/guzzle7-adapter": "^0.1",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "suggest": {
+                "m4tthumphrey/php-gitlab-api": "For further API usage using the acquired OAuth2 token"
+            },
+            "time": "2021-02-08T12:15:55+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Omines\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niels Keurentjes",
+                    "email": "niels.keurentjes@omines.com",
+                    "homepage": "https://www.omines.nl/"
+                }
+            ],
+            "description": "GitLab OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "gitlab",
+                "oauth",
+                "oauth2"
+            ],
+            "support": {
+                "issues": "https://github.com/omines/oauth2-gitlab/issues",
+                "source": "https://github.com/omines/oauth2-gitlab/tree/3.4.0"
+            },
+            "install-path": "../omines/oauth2-gitlab"
         },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mrjoops/oauth2-jira/zipball/9c270f7a70ea13c8d844676cddf17977991cb347",
-            "reference": "9c270f7a70ea13c8d844676cddf17977991cb347",
-            "shasum": ""
+        {
+            "name": "thenetworg/oauth2-azure",
+            "version": "v1.4.0",
+            "version_normalized": "1.4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheNetworg/oauth2-azure.git",
+                "reference": "c57dcb63a925c29e744bffa4a079a95680dd5faf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheNetworg/oauth2-azure/zipball/c57dcb63a925c29e744bffa4a079a95680dd5faf",
+                "reference": "c57dcb63a925c29e744bffa4a079a95680dd5faf",
+                "shasum": ""
+            },
+            "require": {
+                "firebase/php-jwt": "~3.0||~4.0||~5.0",
+                "league/oauth2-client": "~2.0",
+                "php": ">=5.5.0"
+            },
+            "time": "2018-10-02T08:54:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "TheNetworg\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Hajek",
+                    "email": "jan.hajek@thenetw.org",
+                    "homepage": "https://thenetw.org"
+                }
+            ],
+            "description": "Azure Active Directory OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "SSO",
+                "aad",
+                "authorization",
+                "azure",
+                "azure active directory",
+                "client",
+                "microsoft",
+                "oauth",
+                "oauth2",
+                "windows azure"
+            ],
+            "support": {
+                "issues": "https://github.com/TheNetworg/oauth2-azure/issues",
+                "source": "https://github.com/TheNetworg/oauth2-azure/tree/master"
+            },
+            "install-path": "../thenetworg/oauth2-azure"
         },
-        "require": {
-            "league/oauth2-client": "^2.0"
+        {
+            "name": "vertisan/oauth2-twitch-helix",
+            "version": "1.1.2",
+            "version_normalized": "1.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vertisan/oauth2-twitch-helix.git",
+                "reference": "67cac44b4adf113aee026424b435975a026db0e9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vertisan/oauth2-twitch-helix/zipball/67cac44b4adf113aee026424b435975a026db0e9",
+                "reference": "67cac44b4adf113aee026424b435975a026db0e9",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.2.1",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "time": "2022-02-03T20:38:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Vertisan\\OAuth2\\Client\\Provider\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Farys",
+                    "email": "pmg.farys@gmail.com",
+                    "homepage": "https://github.com/vertisan"
+                }
+            ],
+            "description": "Twitch (new version Helix) OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "client",
+                "helix",
+                "league",
+                "oauth",
+                "package",
+                "twitch"
+            ],
+            "support": {
+                "issues": "https://github.com/vertisan/oauth2-twitch-helix/issues",
+                "source": "https://github.com/vertisan/oauth2-twitch-helix/tree/1.1.2"
+            },
+            "install-path": "../vertisan/oauth2-twitch-helix"
         },
-        "require-dev": {
-            "mockery/mockery": "^1.2",
-            "phpunit/phpunit": "^5.0",
-            "squizlabs/php_codesniffer": "^3.3"
-        },
-        "time": "2018-11-11T19:49:42+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Mrjoops\\OAuth2\\Client\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Alexandre Lahure",
-                "email": "alexandre@lahu.re"
-            }
-        ],
-        "description": "Jira OAuth 2.0 support for the PHP League's OAuth 2.0 Client",
-        "keywords": [
-            "authorisation",
-            "authorization",
-            "client",
-            "jira",
-            "oauth",
-            "oauth2"
-        ]
-    },
-    {
-        "name": "omines/oauth2-gitlab",
-        "version": "3.1.1",
-        "version_normalized": "3.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/omines/oauth2-gitlab.git",
-            "reference": "2cd54da2c91e41731c1c9270c3fff51bdbbff47b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/2cd54da2c91e41731c1c9270c3fff51bdbbff47b",
-            "reference": "2cd54da2c91e41731c1c9270c3fff51bdbbff47b",
-            "shasum": ""
-        },
-        "require": {
-            "league/oauth2-client": "^2.2",
-            "php": ">=5.6"
-        },
-        "require-dev": {
-            "friendsofphp/php-cs-fixer": "^2.0",
-            "m4tthumphrey/php-gitlab-api": "^9.0.0",
-            "mockery/mockery": "^1.0",
-            "php-http/guzzle6-adapter": "^1.1.1",
-            "phpunit/phpunit": "^5.7 || ^7.3"
-        },
-        "suggest": {
-            "m4tthumphrey/php-gitlab-api": "For further API usage using the acquired OAuth2 token"
-        },
-        "time": "2018-10-01T12:39:59+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Omines\\OAuth2\\Client\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Niels Keurentjes",
-                "email": "niels.keurentjes@omines.com",
-                "homepage": "https://www.omines.nl/"
-            }
-        ],
-        "description": "GitLab OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-        "keywords": [
-            "authorisation",
-            "authorization",
-            "client",
-            "gitlab",
-            "oauth",
-            "oauth2"
-        ]
-    },
-    {
-        "name": "thenetworg/oauth2-azure",
-        "version": "v1.4.2",
-        "version_normalized": "1.4.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/TheNetworg/oauth2-azure.git",
-            "reference": "1bd78900f8048c9493b6f27a2e4409ee62a5718a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/TheNetworg/oauth2-azure/zipball/1bd78900f8048c9493b6f27a2e4409ee62a5718a",
-            "reference": "1bd78900f8048c9493b6f27a2e4409ee62a5718a",
-            "shasum": ""
-        },
-        "require": {
-            "firebase/php-jwt": "~3.0||~4.0||~5.0",
-            "league/oauth2-client": "~2.0",
-            "php": "^5.6|^7.0"
-        },
-        "time": "2019-01-23T18:20:31+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "TheNetworg\\OAuth2\\Client\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jan Hajek",
-                "email": "jan.hajek@thenetw.org",
-                "homepage": "https://thenetw.org"
-            }
-        ],
-        "description": "Azure Active Directory OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-        "keywords": [
-            "SSO",
-            "aad",
-            "authorization",
-            "azure",
-            "azure active directory",
-            "client",
-            "microsoft",
-            "oauth",
-            "oauth2",
-            "windows azure"
-        ]
-    },
-    {
-        "name": "wohali/oauth2-discord-new",
-        "version": "v1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/wohali/oauth2-discord-new.git",
-            "reference": "990bdfb59b4cd2086e0524b429dc12b5142d66ad"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/wohali/oauth2-discord-new/zipball/990bdfb59b4cd2086e0524b429dc12b5142d66ad",
-            "reference": "990bdfb59b4cd2086e0524b429dc12b5142d66ad",
-            "shasum": ""
-        },
-        "require": {
-            "league/oauth2-client": "^2.0"
-        },
-        "conflict": {
-            "team-reflex/oauth2-discord": ">=1.0"
-        },
-        "require-dev": {
-            "jakub-onderka/php-parallel-lint": "~0.9",
-            "mockery/mockery": "~0.9",
-            "phpunit/phpunit": "^5.0",
-            "squizlabs/php_codesniffer": "^2.0"
-        },
-        "time": "2017-10-15T23:24:28+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Wohali\\OAuth2\\Client\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Joan Touzet",
-                "email": "wohali@gmail.com",
-                "homepage": "https://github.com/wohali"
-            }
-        ],
-        "description": "Discord OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-        "keywords": [
-            "authorisation",
-            "authorization",
-            "client",
-            "discord",
-            "oauth",
-            "oauth2"
-        ]
-    }
-]
+        {
+            "name": "wohali/oauth2-discord-new",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wohali/oauth2-discord-new.git",
+                "reference": "0dcb5059cded358f55ae566de9621652cf8542c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wohali/oauth2-discord-new/zipball/0dcb5059cded358f55ae566de9621652cf8542c6",
+                "reference": "0dcb5059cded358f55ae566de9621652cf8542c6",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "conflict": {
+                "team-reflex/oauth2-discord": ">=1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~1.3.0",
+                "php-parallel-lint/php-parallel-lint": "~0.9",
+                "phpunit/phpunit": "~8.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "time": "2020-06-12T07:27:09+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Wohali\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joan Touzet",
+                    "email": "code@atypical.net",
+                    "homepage": "https://github.com/wohali"
+                }
+            ],
+            "description": "Discord OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "discord",
+                "oauth",
+                "oauth2"
+            ],
+            "support": {
+                "issues": "https://github.com/wohali/oauth2-discord-new/issues",
+                "source": "https://github.com/wohali/oauth2-discord-new/tree/master"
+            },
+            "install-path": "../wohali/oauth2-discord-new"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

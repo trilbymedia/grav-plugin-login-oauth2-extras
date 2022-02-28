@@ -6,7 +6,7 @@ class GitlabProvider extends ExtraProvider
     protected $name = 'Gitlab';
     protected $classname = 'Omines\\OAuth2\\Client\\Provider\\Gitlab';
 
-    public function initProvider(array $options)
+    public function initProvider(array $options): void
     {
         $domain = $this->config->get('providers.gitlab.domain', false);
 

@@ -10,7 +10,7 @@ class AzureProvider extends ExtraProvider
     protected $name = 'Azure';
     protected $classname = 'TheNetworg\\OAuth2\\Client\\Provider\\Azure';
 
-    public function initProvider(array $options)
+    public function initProvider(array $options): void
     {
         $options += [
             'clientId'      => $this->config->get('providers.azure.client_id'),

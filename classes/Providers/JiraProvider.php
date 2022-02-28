@@ -6,7 +6,7 @@ class JiraProvider extends BaseProvider
     protected $name = 'Jira';
     protected $classname = 'Mrjoops\\OAuth2\\Client\Provider\\Jira';
 
-    public function initProvider(array $options)
+    public function initProvider(array $options): void
     {
         $options += [
             'clientId'      => $this->config->get('providers.jira.client_id'),
