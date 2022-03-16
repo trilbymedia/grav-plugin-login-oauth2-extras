@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "351b7c3068e62966776d032e443a1901",
+    "content-hash": "3d47624934122c1c00dc733142cd2ab2",
     "packages": [
         {
             "name": "adam-paterson/oauth2-slack",
@@ -58,60 +58,24 @@
                 "slack",
                 "slack api"
             ],
+            "support": {
+                "issues": "https://github.com/adam-paterson/oauth2-slack/issues",
+                "source": "https://github.com/adam-paterson/oauth2-slack/tree/master"
+            },
             "time": "2017-06-20T14:43:31+00:00"
         },
         {
-            "name": "depotwarehouse/oauth2-twitch",
-            "version": "1.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tpavlek/oauth2-twitch.git",
-                "reference": "6334c97088bcf21bd91b6f366ea8166a0782681c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tpavlek/oauth2-twitch/zipball/6334c97088bcf21bd91b6f366ea8166a0782681c",
-                "reference": "6334c97088bcf21bd91b6f366ea8166a0782681c",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": "^2.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Depotwarehouse\\OAuth2\\Client\\Twitch\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Davide Gaido",
-                    "email": "davide@0plus1.com"
-                },
-                {
-                    "name": "Troy Pavlek",
-                    "email": "troy@tpavlek.me"
-                }
-            ],
-            "description": "A Twitch provider for league/oauth2-client",
-            "time": "2019-10-17T04:42:43+00:00"
-        },
-        {
             "name": "firebase/php-jwt",
-            "version": "v5.2.0",
+            "version": "v5.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/firebase/php-jwt.git",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb"
+                "reference": "83b609028194aa042ea33b5af2d41a7427de80e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/feb0e820b8436873675fd3aca04f3728eb2185cb",
-                "reference": "feb0e820b8436873675fd3aca04f3728eb2185cb",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/83b609028194aa042ea33b5af2d41a7427de80e6",
+                "reference": "83b609028194aa042ea33b5af2d41a7427de80e6",
                 "shasum": ""
             },
             "require": {
@@ -119,6 +83,9 @@
             },
             "require-dev": {
                 "phpunit/phpunit": ">=4.8 <=9"
+            },
+            "suggest": {
+                "paragonie/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
             },
             "type": "library",
             "autoload": {
@@ -148,7 +115,11 @@
                 "jwt",
                 "php"
             ],
-            "time": "2020-03-25T18:49:23+00:00"
+            "support": {
+                "issues": "https://github.com/firebase/php-jwt/issues",
+                "source": "https://github.com/firebase/php-jwt/tree/v5.5.1"
+            },
+            "time": "2021-11-08T20:18:51+00:00"
         },
         {
             "name": "gravure/oauth2-patreon",
@@ -168,6 +139,7 @@
                 "league/oauth2-client": "^1.0 || ^2.0",
                 "php": "5.6.* || >=7.0"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -191,6 +163,10 @@
                 "oauth2",
                 "patreon"
             ],
+            "support": {
+                "issues": "https://github.com/gravure/oauth2-patreon/issues",
+                "source": "https://github.com/gravure/oauth2-patreon"
+            },
             "time": "2018-02-06T12:41:19+00:00"
         },
         {
@@ -240,32 +216,38 @@
                 "oauth",
                 "oauth2"
             ],
+            "support": {
+                "issues": "https://github.com/mrjoops/oauth2-jira/issues",
+                "source": "https://github.com/mrjoops/oauth2-jira/tree/develop"
+            },
             "time": "2018-11-11T19:49:42+00:00"
         },
         {
             "name": "omines/oauth2-gitlab",
-            "version": "3.1.1",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/omines/oauth2-gitlab.git",
-                "reference": "2cd54da2c91e41731c1c9270c3fff51bdbbff47b"
+                "reference": "0c37361c54fae71a85350c445bda1834db5859af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/2cd54da2c91e41731c1c9270c3fff51bdbbff47b",
-                "reference": "2cd54da2c91e41731c1c9270c3fff51bdbbff47b",
+                "url": "https://api.github.com/repos/omines/oauth2-gitlab/zipball/0c37361c54fae71a85350c445bda1834db5859af",
+                "reference": "0c37361c54fae71a85350c445bda1834db5859af",
                 "shasum": ""
             },
             "require": {
-                "league/oauth2-client": "^2.2",
-                "php": ">=5.6"
+                "league/oauth2-client": "^2.4.1",
+                "php": ">=7.2"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
-                "m4tthumphrey/php-gitlab-api": "^9.0.0",
+                "guzzlehttp/psr7": "^1.6",
+                "http-interop/http-factory-guzzle": "^1.0",
+                "m4tthumphrey/php-gitlab-api": "^10.0|^11.0",
                 "mockery/mockery": "^1.0",
-                "php-http/guzzle6-adapter": "^1.1.1",
-                "phpunit/phpunit": "^5.7 || ^7.3"
+                "php-http/guzzle7-adapter": "^0.1",
+                "phpunit/phpunit": "^8.0|^9.0"
             },
             "suggest": {
                 "m4tthumphrey/php-gitlab-api": "For further API usage using the acquired OAuth2 token"
@@ -301,26 +283,90 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2018-10-01T12:39:59+00:00"
+            "support": {
+                "issues": "https://github.com/omines/oauth2-gitlab/issues",
+                "source": "https://github.com/omines/oauth2-gitlab/tree/3.4.0"
+            },
+            "time": "2021-02-08T12:15:55+00:00"
         },
         {
-            "name": "thenetworg/oauth2-azure",
-            "version": "v1.4.2",
+            "name": "stevenmaguire/oauth2-keycloak",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TheNetworg/oauth2-azure.git",
-                "reference": "1bd78900f8048c9493b6f27a2e4409ee62a5718a"
+                "url": "https://github.com/stevenmaguire/oauth2-keycloak.git",
+                "reference": "645b84107b82a08cfed9c101081eb8548ea5be11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TheNetworg/oauth2-azure/zipball/1bd78900f8048c9493b6f27a2e4409ee62a5718a",
-                "reference": "1bd78900f8048c9493b6f27a2e4409ee62a5718a",
+                "url": "https://api.github.com/repos/stevenmaguire/oauth2-keycloak/zipball/645b84107b82a08cfed9c101081eb8548ea5be11",
+                "reference": "645b84107b82a08cfed9c101081eb8548ea5be11",
+                "shasum": ""
+            },
+            "require": {
+                "firebase/php-jwt": "~4.0|~5.0",
+                "league/oauth2-client": "^2.0 <2.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stevenmaguire\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Maguire",
+                    "email": "stevenmaguire@gmail.com",
+                    "homepage": "https://github.com/stevenmaguire"
+                }
+            ],
+            "description": "Keycloak OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "keycloak",
+                "oauth",
+                "oauth2"
+            ],
+            "support": {
+                "issues": "https://github.com/stevenmaguire/oauth2-keycloak/issues",
+                "source": "https://github.com/stevenmaguire/oauth2-keycloak/tree/3.0.0"
+            },
+            "time": "2022-01-23T18:01:00+00:00"
+        },
+        {
+            "name": "thenetworg/oauth2-azure",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TheNetworg/oauth2-azure.git",
+                "reference": "c57dcb63a925c29e744bffa4a079a95680dd5faf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TheNetworg/oauth2-azure/zipball/c57dcb63a925c29e744bffa4a079a95680dd5faf",
+                "reference": "c57dcb63a925c29e744bffa4a079a95680dd5faf",
                 "shasum": ""
             },
             "require": {
                 "firebase/php-jwt": "~3.0||~4.0||~5.0",
                 "league/oauth2-client": "~2.0",
-                "php": "^5.6|^7.0"
+                "php": ">=5.5.0"
             },
             "type": "library",
             "autoload": {
@@ -352,20 +398,81 @@
                 "oauth2",
                 "windows azure"
             ],
-            "time": "2019-01-23T18:20:31+00:00"
+            "support": {
+                "issues": "https://github.com/TheNetworg/oauth2-azure/issues",
+                "source": "https://github.com/TheNetworg/oauth2-azure/tree/master"
+            },
+            "time": "2018-10-02T08:54:26+00:00"
         },
         {
-            "name": "wohali/oauth2-discord-new",
-            "version": "v1.0.0",
+            "name": "vertisan/oauth2-twitch-helix",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wohali/oauth2-discord-new.git",
-                "reference": "990bdfb59b4cd2086e0524b429dc12b5142d66ad"
+                "url": "https://github.com/vertisan/oauth2-twitch-helix.git",
+                "reference": "67cac44b4adf113aee026424b435975a026db0e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wohali/oauth2-discord-new/zipball/990bdfb59b4cd2086e0524b429dc12b5142d66ad",
-                "reference": "990bdfb59b4cd2086e0524b429dc12b5142d66ad",
+                "url": "https://api.github.com/repos/vertisan/oauth2-twitch-helix/zipball/67cac44b4adf113aee026424b435975a026db0e9",
+                "reference": "67cac44b4adf113aee026424b435975a026db0e9",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.2.1",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Vertisan\\OAuth2\\Client\\Provider\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Farys",
+                    "email": "pmg.farys@gmail.com",
+                    "homepage": "https://github.com/vertisan"
+                }
+            ],
+            "description": "Twitch (new version Helix) OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "client",
+                "helix",
+                "league",
+                "oauth",
+                "package",
+                "twitch"
+            ],
+            "support": {
+                "issues": "https://github.com/vertisan/oauth2-twitch-helix/issues",
+                "source": "https://github.com/vertisan/oauth2-twitch-helix/tree/1.1.2"
+            },
+            "time": "2022-02-03T20:38:26+00:00"
+        },
+        {
+            "name": "wohali/oauth2-discord-new",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wohali/oauth2-discord-new.git",
+                "reference": "0dcb5059cded358f55ae566de9621652cf8542c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wohali/oauth2-discord-new/zipball/0dcb5059cded358f55ae566de9621652cf8542c6",
+                "reference": "0dcb5059cded358f55ae566de9621652cf8542c6",
                 "shasum": ""
             },
             "require": {
@@ -375,9 +482,9 @@
                 "team-reflex/oauth2-discord": ">=1.0"
             },
             "require-dev": {
-                "jakub-onderka/php-parallel-lint": "~0.9",
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "^5.0",
+                "mockery/mockery": "~1.3.0",
+                "php-parallel-lint/php-parallel-lint": "~0.9",
+                "phpunit/phpunit": "~8.0",
                 "squizlabs/php_codesniffer": "^2.0"
             },
             "type": "library",
@@ -398,7 +505,7 @@
             "authors": [
                 {
                     "name": "Joan Touzet",
-                    "email": "wohali@gmail.com",
+                    "email": "code@atypical.net",
                     "homepage": "https://github.com/wohali"
                 }
             ],
@@ -411,7 +518,11 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2017-10-15T23:24:28+00:00"
+            "support": {
+                "issues": "https://github.com/wohali/oauth2-discord-new/issues",
+                "source": "https://github.com/wohali/oauth2-discord-new/tree/master"
+            },
+            "time": "2020-06-12T07:27:09+00:00"
         }
     ],
     "packages-dev": [],
@@ -424,5 +535,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.2.0"
 }

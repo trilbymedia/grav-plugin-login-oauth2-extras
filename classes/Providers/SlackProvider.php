@@ -6,7 +6,7 @@ class SlackProvider extends BaseProvider
     protected $name = 'Slack';
     protected $classname = 'AdamPaterson\\OAuth2\\Client\\Provider\\Slack';
 
-    public function initProvider(array $options)
+    public function initProvider(array $options): void
     {
         $options += [
             'clientId'      => $this->config->get('providers.slack.client_id'),

@@ -6,7 +6,7 @@ class DiscordProvider extends ExtraProvider
     protected $name = 'Discord';
     protected $classname = 'Wohali\\OAuth2\\Client\\Provider\\Discord';
 
-    public function initProvider(array $options)
+    public function initProvider(array $options): void
     {
         $options += [
             'clientId'      => $this->config->get('providers.discord.client_id'),

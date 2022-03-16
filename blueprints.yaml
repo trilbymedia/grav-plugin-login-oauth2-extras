@@ -1,7 +1,7 @@
 name: Login OAuth2 Extras
 type: plugin
 slug: login-oauth2-extras
-version: 2.1.1
+version: 2.1.2
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
@@ -756,4 +756,151 @@ form:
           type: display
           style: vertical
           content: '[<i class="fa fa-book"></i> Patreon OAuth2 from the official documentation](https://docs.patreon.com/#oauth?target=_blank)'
+          markdown: true
+    keycloak:
+      type: fieldset
+      title: Keycloak
+      collapsible: true
+
+      fields:
+
+        keycloak_columns:
+          type: columns
+
+          fields:
+
+            keycloak_column_left:
+              type: column
+
+              fields:
+
+                keycloak.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.keycloak.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.keycloak.realm:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.REALM
+
+                providers.keycloak.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.keycloak.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+                  
+                providers.keycloak.authserver_url:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.AUTHSERVER_URL
+
+                providers.keycloak.encryption_algorithm:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.ENCRYPTION_ALGORITHM
+
+                providers.keycloak.encryption_key:
+                  type: textarea
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.ENCRYPTION_KEY
+
+                providers.keycloak.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+                providers.keycloak.userdata_login:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_LOGIN
+                  
+                providers.keycloak.userdata_fullname:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_FULLNAME
+
+                providers.keycloak.userdata_email:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_EMAIL
+
+            keycloak_column_right:
+              type: column
+
+              fields:
+
+                keycloak.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.keycloak.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.keycloak.realm:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.REALM
+
+                admin.providers.keycloak.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.keycloak.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.keycloak.authserver_url:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.AUTHSERVER_URL
+
+                admin.providers.keycloak.encryption_algorithm:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.ENCRYPTION_ALGORITHM
+
+                admin.providers.keycloak.encryption_key:
+                  type: textarea
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.ENCRYPTION_KEY
+
+                admin.providers.keycloak.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+                admin.providers.keycloak.userdata_login:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_LOGIN
+                  
+                admin.providers.keycloak.userdata_fullname:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_FULLNAME
+
+                admin.providers.keycloak.userdata_email:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_EMAIL
+
+        providers.keycloak.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Keycloak Provider for OAuth2](https://github.com/stevenmaguire/oauth2-keycloak?target=_blank)'
           markdown: true

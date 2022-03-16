@@ -1,3 +1,12 @@
+# v2.1.2
+## 03/16/2022
+
+1. [](#new)
+   * Added Keycloak provider [#5](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/pull/5)
+2. [](#improved)
+   * Updated Twitch provider to TwitchHelix [#6](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/issues/6)
+   * Updated all vendor libraries to latest
+
 # v2.1.1
 ## 12/02/2020
 

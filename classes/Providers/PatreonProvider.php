@@ -6,7 +6,7 @@ class PatreonProvider extends ExtraProvider
     protected $name = 'Patreon';
     protected $classname = 'Gravure\\Patreon\\Oauth\\Provider\\Patreon';
 
-    public function initProvider(array $options)
+    public function initProvider(array $options): void
     {
         $options += [
             'clientId'      => $this->config->get('providers.patreon.client_id'),
