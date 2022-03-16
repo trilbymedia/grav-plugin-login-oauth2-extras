@@ -1,5 +1,5 @@
 # v2.1.2
-## mm/dd/2022
+## 03/16/2022
 
 1. [](#new)
    * Added Keycloak provider [#5](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/pull/5)
