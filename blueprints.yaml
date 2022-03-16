@@ -1,7 +1,7 @@
 name: Login OAuth2 Extras
 type: plugin
 slug: login-oauth2-extras
-version: 2.1.1
+version: 2.1.2
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
