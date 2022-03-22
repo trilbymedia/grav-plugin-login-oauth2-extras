@@ -58,6 +58,13 @@ providers:
     userdata_login: ''
     userdata_fullname: ''
     userdata_email: ''
+  okta:
+      enabled: false
+      client_id:
+      client_secret:
+      issuer:
+      options:
+        scope: ['openid', 'email', 'profile']
 
 admin:
   enabled: true
@@ -120,3 +127,10 @@ admin:
       userdata_login: ''
       userdata_fullname: ''
       userdata_email: ''
+    okta:
+      enabled: false
+      client_id:
+      client_secret:
+      issuer:
+      options:
+        scope: ['openid', 'email', 'profile']

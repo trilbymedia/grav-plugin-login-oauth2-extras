@@ -1,0 +1,46 @@
+{
+    "name": "foxworth42/oauth2-okta",
+    "type": "library",
+    "description": "Okta OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ed Walker",
+            "email": "github@foxwire.org"
+        }
+    ],
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authentication",
+        "okta"
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1.0",
+        "league/oauth2-client": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "php-coveralls/php-coveralls": "^2.1",
+        "squizlabs/php_codesniffer": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Foxworth42\\OAuth2\\Client\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Foxworth42\\OAuth2\\Client\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check": "phpcs",
+        "lint": "phpcs",
+        "lint-fix": "phpcbf"
+    }
+}

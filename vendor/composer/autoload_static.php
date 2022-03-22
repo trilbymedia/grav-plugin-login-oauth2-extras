@@ -38,6 +38,7 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         ),
         'F' => 
         array (
+            'Foxworth42\\OAuth2\\Client\\' => 25,
             'Firebase\\JWT\\' => 13,
         ),
         'A' => 
@@ -78,6 +79,10 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         'Grav\\Plugin\\Login\\OAuth2\\' => 
         array (
             0 => __DIR__ . '/../..' . '/classes',
+        ),
+        'Foxworth42\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/foxworth42/oauth2-okta/src',
         ),
         'Firebase\\JWT\\' => 
         array (
