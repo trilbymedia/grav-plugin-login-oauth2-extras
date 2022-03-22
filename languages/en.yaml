@@ -6,3 +6,5 @@ PLUGIN_LOGIN_OAUTH2_EXTRAS:
   USERDATA_LOGIN: "Login key"
   USERDATA_FULLNAME: "FullName key"
   USERDATA_EMAIL: "Email key"
+  OKTA:
+    ISSUER: "Issuer"
