@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '74c6485bdfcf3f28740ac047f3db28cef02bfcf2',
+        'reference' => '21ea886e486956d4d163ed21e51c569ac666f750',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '74c6485bdfcf3f28740ac047f3db28cef02bfcf2',
+            'reference' => '21ea886e486956d4d163ed21e51c569ac666f750',
             'dev_requirement' => false,
         ),
         'adam-paterson/oauth2-slack' => array(
@@ -35,6 +35,15 @@
             'install_path' => __DIR__ . '/../firebase/php-jwt',
             'aliases' => array(),
             'reference' => '83b609028194aa042ea33b5af2d41a7427de80e6',
+            'dev_requirement' => false,
+        ),
+        'foxworth42/oauth2-okta' => array(
+            'pretty_version' => 'v1.0.2',
+            'version' => '1.0.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../foxworth42/oauth2-okta',
+            'aliases' => array(),
+            'reference' => '0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946',
             'dev_requirement' => false,
         ),
         'gravure/oauth2-patreon' => array(

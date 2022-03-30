@@ -15,6 +15,7 @@ Currently the plugin supports the following providers:
 * **Azure** - https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 * **Patreon** - https://docs.patreon.com/#oauth
 * **Keycloak** - https://github.com/stevenmaguire/oauth2-keycloak
+* **Okta** - https://github.com/foxworth42/oauth2-okta
 
 If you wish to add a new provider, please open a pull request against this repo.
 
@@ -95,6 +96,13 @@ providers:
     userdata_login: ''
     userdata_fullname: ''
     userdata_email: ''
+  okta:
+    enabled: false
+    client_id:
+    client_secret:
+    issuer:
+    options:
+      scope: ['openid', 'email', 'profile']
   
 
 admin:
@@ -158,6 +166,13 @@ admin:
       userdata_login: ''
       userdata_fullname: ''
       userdata_email: ''
+    okta:
+      enabled: false
+      client_id:
+      client_secret:
+      issuer:
+      options:
+        scope: ['openid', 'email', 'profile']
 ```
 
 Note that if you use the admin plugin, a file with your configuration, and named login-oauth2-extras.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
@@ -247,3 +262,12 @@ Note that if you use the admin plugin, a file with your configuration, and named
 |userdata_fullname| The user's **full name** key of the Keycloak user data.|`<string>` \| e.g. `name` |
 |userdata_email| The user's **email address** key of the Keycloak user data.|`<string>` \| e.g. `email` |
 
+#### Okta
+
+|Key                   |Description                 | Values |
+|:---------------------|:---------------------------|:-------|
+| enabled | Enable or disable this specific provider. This stops its showing as an valid login option | `true` \| [default: `false`] |
+| client_id | The **Client ID** Provided by Okta when you register an application for OAuth2 authentication | `` |
+| client_secret | The **Client Secret** Provided by Okta when you register an application for OAuth2 authentication | `` |
+| issuer | The **Issuer** Provided by Okta when you register an application for OAuth2 authentication | `` |
+| scope | An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | default: `['openid', 'email', 'profile']` |
