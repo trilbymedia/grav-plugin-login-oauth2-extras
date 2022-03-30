@@ -1,7 +1,7 @@
 name: Login OAuth2 Extras
 type: plugin
 slug: login-oauth2-extras
-version: 2.1.2
+version: 2.2.0
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
@@ -903,4 +903,104 @@ form:
           type: display
           style: vertical
           content: '[<i class="fa fa-book"></i> Keycloak Provider for OAuth2](https://github.com/stevenmaguire/oauth2-keycloak?target=_blank)'
+          markdown: true
+
+    okta:
+      type: fieldset
+      title: Okta
+      collapsible: true
+
+      fields:
+
+        okta_columns:
+          type: columns
+
+          fields:
+
+            okta_column_left:
+              type: column
+
+              fields:
+
+                okta.site:
+                  type: display
+                  style: vertical
+                  content: '<h3>Site</h3>'
+
+                providers.okta.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                providers.okta.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                providers.okta.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                providers.okta.issuer:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.OKTA.ISSUER
+
+                providers.okta.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+            okta_column_right:
+              type: column
+
+              fields:
+
+                okta.admin:
+                  type: display
+                  style: vertical
+                  content: '<h3>Admin</h3>'
+
+                admin.providers.okta.enabled:
+                  type: toggle
+                  label: Enabled
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
+                admin.providers.okta.client_id:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_ID
+
+                admin.providers.okta.client_secret:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2.CLIENT_SECRET
+
+                admin.providers.okta.issuer:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.OKTA.ISSUER
+
+                admin.providers.okta.options.scope:
+                  type: selectize
+                  size: large
+                  label: PLUGIN_LOGIN_OAUTH2.SCOPE
+                  classes: fancy
+                  validate:
+                    type: commalist
+
+        providers.okta.description:
+          type: display
+          style: vertical
+          content: '[<i class="fa fa-book"></i> Okta for OAuth2](https://github.com/foxworth42/oauth2-okta?target=_blank)'
           markdown: true

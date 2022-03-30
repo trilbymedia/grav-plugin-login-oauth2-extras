@@ -14,6 +14,7 @@ return array(
     'Mrjoops\\OAuth2\\Client\\' => array($vendorDir . '/mrjoops/oauth2-jira/src'),
     'Gravure\\Patreon\\Oauth\\' => array($vendorDir . '/gravure/oauth2-patreon/src'),
     'Grav\\Plugin\\Login\\OAuth2\\' => array($baseDir . '/classes'),
+    'Foxworth42\\OAuth2\\Client\\' => array($vendorDir . '/foxworth42/oauth2-okta/src'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'AdamPaterson\\OAuth2\\Client\\' => array($vendorDir . '/adam-paterson/oauth2-slack/src'),
 );

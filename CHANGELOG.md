@@ -1,3 +1,11 @@
+# v2.2.0
+## 03/30/2022
+
+1. [](#new)
+   * Added Okta provider [#7](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/pull/7)
+2. [](#bugfix)
+   * Fixed issues with TwitchHelix provider [#6](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/issues/6)
+   
 # v2.1.2
 ## 03/16/2022
 

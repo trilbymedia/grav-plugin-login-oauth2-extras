@@ -122,6 +122,63 @@
             "install-path": "../firebase/php-jwt"
         },
         {
+            "name": "foxworth42/oauth2-okta",
+            "version": "v1.0.2",
+            "version_normalized": "1.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/foxworth42/oauth2-okta.git",
+                "reference": "0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/foxworth42/oauth2-okta/zipball/0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946",
+                "reference": "0e7c2eb68f57eff8aafc4a3f0a1a1ec1c147c946",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0",
+                "php": ">=7.1.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^7.0",
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "time": "2020-09-28T06:28:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Foxworth42\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ed Walker",
+                    "email": "github@foxwire.org"
+                }
+            ],
+            "description": "Okta OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "client",
+                "oauth",
+                "oauth2",
+                "okta"
+            ],
+            "support": {
+                "issues": "https://github.com/foxworth42/oauth2-okta/issues",
+                "source": "https://github.com/foxworth42/oauth2-okta/tree/v1.0.2"
+            },
+            "install-path": "../foxworth42/oauth2-okta"
+        },
+        {
             "name": "gravure/oauth2-patreon",
             "version": "dev-master",
             "version_normalized": "dev-master",

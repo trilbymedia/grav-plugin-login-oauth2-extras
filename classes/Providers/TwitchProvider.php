@@ -29,16 +29,17 @@ class TwitchProvider extends ExtraProvider
     {
         $data_user = [
             'id'         => $user->getId(),
-            'login'      => $user->getUsername(),
+            'login'      => $user->getLogin(),
             'fullname'   => $user->getDisplayName(),
             'email'      => $user->getEmail(),
             'twitch'      => [
-                'avatar_url' => $user->getLogo(),
-                'bio' => $user->getBio(),
+                'avatar_url' => $user->getProfileImageUrl(),
+                'bio' => $user->getDescription(),
                 'type' => $user->getType()
             ]
         ];
 
         return $data_user;
     }
+
 }
