@@ -1,5 +1,5 @@
 # v2.2.0
-## mm/dd/2022
+## 03/30/2022
 
 1. [](#new)
    * Added Okta provider [#7](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/pull/7)
