@@ -1,4 +1,4 @@
 <button name="oauth2" type="submit" value="wordpress" class="wordpress">
     {% include('@oauth2-media/wordpress.svg') %}
-    <span>Wordpress</span>
+    <span>{{ grav.oauth2.providers.wordpress.options.label ? grav.oauth2.providers.wordpress.options.label : 'Wordpress' }}</span>
 </button>

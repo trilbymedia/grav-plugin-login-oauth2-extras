@@ -72,6 +72,7 @@ providers:
     domain:
     options:
       scope: ['openid', 'email', 'profile']
+      label: ''
 
 admin:
   enabled: true
@@ -148,3 +149,4 @@ admin:
       domain: 
       options:
         scope: ['openid', 'email', 'profile']
+        label: ''

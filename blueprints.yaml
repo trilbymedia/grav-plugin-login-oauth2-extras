@@ -1059,6 +1059,11 @@ form:
                   validate:
                     type: commalist
 
+                admin.providers.wordpress.options.label:
+                  type: text
+                  placeholder: Wordpress
+                  label: Custom button text
+
             wordpress_column_right:
               type: column
 
@@ -1100,6 +1105,11 @@ form:
                   classes: fancy
                   validate:
                     type: commalist
+
+                admin.providers.wordpress.options.label:
+                  type: text
+                  placeholder: Wordpress
+                  label: Custom button text
 
         providers.wordpress.description:
           type: display
