@@ -33,6 +33,7 @@ class WordpressProvider extends ExtraProvider
             'login'      => $user->getUsername(),
             'email'      => $user->getEmail(),
             'username'   => $user->toArray()['name'],
+            'fullname'   => $user->toArray()['name']
         ];
 
         return $data_user;
