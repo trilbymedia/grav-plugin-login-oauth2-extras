@@ -31,6 +31,10 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         array (
             'Mrjoops\\OAuth2\\Client\\' => 22,
         ),
+        'K' => 
+        array (
+            'Krombox\\OAuth2\\Client\\' => 22,
+        ),
         'G' => 
         array (
             'Gravure\\Patreon\\Oauth\\' => 22,
@@ -71,6 +75,10 @@ class ComposerStaticInitbd5d628261f1599470d200425791c144
         'Mrjoops\\OAuth2\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/mrjoops/oauth2-jira/src',
+        ),
+        'Krombox\\OAuth2\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/krombox/oauth2-wordpress/src',
         ),
         'Gravure\\Patreon\\Oauth\\' => 
         array (

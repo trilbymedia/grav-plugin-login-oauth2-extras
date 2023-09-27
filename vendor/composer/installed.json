@@ -230,6 +230,68 @@
             "install-path": "../gravure/oauth2-patreon"
         },
         {
+            "name": "krombox/oauth2-wordpress",
+            "version": "0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/krombox/oauth2-wordpress.git",
+                "reference": "69e6e8d7f9f8c6e19b3f521b7d2f71dee9198095"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/krombox/oauth2-wordpress/zipball/69e6e8d7f9f8c6e19b3f521b7d2f71dee9198095",
+                "reference": "69e6e8d7f9f8c6e19b3f521b7d2f71dee9198095",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "time": "2018-03-18T13:25:11+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Krombox\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Kapustian",
+                    "email": "ikrombox@gmail.com",
+                    "homepage": "https://github.com/krombox"
+                }
+            ],
+            "description": "WordPress OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "oauth",
+                "oauth2",
+                "wordpress"
+            ],
+            "support": {
+                "issues": "https://github.com/krombox/oauth2-wordpress/issues",
+                "source": "https://github.com/krombox/oauth2-wordpress/tree/0.1.1"
+            },
+            "install-path": "../krombox/oauth2-wordpress"
+        },
+        {
             "name": "mrjoops/oauth2-jira",
             "version": "v0.2.4",
             "version_normalized": "0.2.4.0",

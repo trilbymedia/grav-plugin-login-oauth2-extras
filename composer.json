@@ -9,7 +9,8 @@
         "guzzlehttp/promises": "^1.3",
         "vertisan/oauth2-twitch-helix": "^1.1",
         "stevenmaguire/oauth2-keycloak": "^3.0",
-        "foxworth42/oauth2-okta": "^1.0"
+        "foxworth42/oauth2-okta": "^1.0",
+        "krombox/oauth2-wordpress": "^0.1.1"
     },
     "replace": {
         "league/oauth2-client": "*",

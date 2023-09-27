@@ -59,12 +59,20 @@ providers:
     userdata_fullname: ''
     userdata_email: ''
   okta:
-      enabled: false
-      client_id:
-      client_secret:
-      issuer:
-      options:
-        scope: ['openid', 'email', 'profile']
+    enabled: false
+    client_id:
+    client_secret:
+    issuer:
+    options:
+      scope: ['openid', 'email', 'profile']
+  wordpress:
+    enabled: false
+    client_id:
+    client_secret:
+    domain:
+    options:
+      scope: ['openid', 'email', 'profile']
+      label: ''
 
 admin:
   enabled: true
@@ -134,3 +142,11 @@ admin:
       issuer:
       options:
         scope: ['openid', 'email', 'profile']
+    wordpress:
+      enabled: false
+      client_id:
+      client_secret:
+      domain: 
+      options:
+        scope: ['openid', 'email', 'profile']
+        label: ''
