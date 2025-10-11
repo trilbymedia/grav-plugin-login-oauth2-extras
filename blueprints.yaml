@@ -822,6 +822,18 @@ form:
                   validate:
                     type: commalist
 
+                providers.keycloak.options.get_groups:
+                  type: toggle
+                  label: Get groups
+                  help: Add all the groups from Keycloak to the users, which syncs existing groups from keycloak with existing groups in Grav (and removes all non synced groups!). This needs the corresponding claim key and potentially a 'groups' scope. Also all `/` characters will be replaced by `_` to support full group paths.
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
                 providers.keycloak.userdata_login:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_LOGIN
@@ -833,6 +845,10 @@ form:
                 providers.keycloak.userdata_email:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_EMAIL
+
+                providers.keycloak.userdata_groups:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_GROUPS
 
             keycloak_column_right:
               type: column
@@ -887,6 +903,18 @@ form:
                   validate:
                     type: commalist
 
+                admin.providers.keycloak.options.get_groups:
+                  type: toggle
+                  label: Get groups
+                  help: Add all the groups from Keycloak to the users, which syncs existing groups from keycloak with existing groups in Grav (and removes all non synced groups!). This needs the corresponding claim key and potentially a 'groups' scope. Also all `/` characters will be replaced by `_` to support full group paths.
+                  highlight: 1
+                  default: 0
+                  options:
+                    1: Enabled
+                    0: Disabled
+                  validate:
+                    type: bool
+
                 admin.providers.keycloak.userdata_login:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_LOGIN
@@ -898,6 +926,10 @@ form:
                 admin.providers.keycloak.userdata_email:
                   type: text
                   label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_EMAIL
+
+                admin.providers.keycloak.userdata_groups:
+                  type: text
+                  label: PLUGIN_LOGIN_OAUTH2_EXTRAS.USERDATA_GROUPS
 
         providers.keycloak.description:
           type: display
