@@ -1,7 +1,7 @@
 name: Login OAuth2 Extras
 type: plugin
 slug: login-oauth2-extras
-version: 2.2.0
+version: 2.2.1
 description: Extra Login OAuth2 Providers (requires Login OAuth2 Plugin)
 icon: plug
 author:
@@ -13,6 +13,9 @@ keywords: grav, plugin, etc
 bugs: https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/issues
 docs: https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/blob/develop/README.md
 license: MIT
+compatibility:
+  grav: ['1.7', '2.0']
+
 dependencies:
   - { name: login-oauth2, version: '~2.0' }
 
