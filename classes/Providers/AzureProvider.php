@@ -123,7 +123,7 @@ class AzureProvider extends ExtraProvider
         }
 
         // Use a data url with a base64 encoded image since we need to provide a url for the avatar.
-        return 'data:' . $photoMeta['@odata.mediaContentType'] . ';base64,' . base64_encode($photo);
+        return 'data:' . $photoMeta['@odata.mediaContentType'] . ';base64,' . base64_encode((string) $photo);
     }
 
     public function getUserGroups($name)

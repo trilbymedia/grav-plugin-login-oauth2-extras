@@ -8,7 +8,7 @@ The **Login Login OAuth2 Extras** Plugin is for [Grav CMS](http://github.com/get
 Currently the plugin supports the following providers:
 
 * **GitLab:** - https://docs.gitlab.com/ee/integration/oauth_provider.html
-* **Discord:** - https://extrasapp.com/developers/docs/topics/oauth2
+* **Discord:** - https://discord.com/developers/docs/topics/oauth2
 * **Slack:** - https://api.slack.com/docs/sign-in-with-slack
 * **Jira:** - https://developer.atlassian.com/server/jira/platform/oauth/
 * **Twitch** - https://dev.twitch.tv/docs/authentication/getting-tokens-oauth/
