@@ -40,6 +40,14 @@ class LoginOAuth2ExtrasPlugin extends Plugin
      */
     public function onPluginsInitialized()
     {
+        // The admin-next SSO bridge builds its own admin-mode `oauth2` service
+        // partway through an `/api/*` request, replacing the one we'd add to
+        // below (and `isAdmin()` is false there anyway, so we'd have picked the
+        // frontend config subtree). Register into that instance when it asks.
+        $this->enable([
+            'onOAuth2ProvidersRegister' => ['onOAuth2ProvidersRegister', 0],
+        ]);
+
         if ($this->isAdmin() && $this->grav['config']->get('plugins.login-oauth2.admin.enabled')) {
             $this->admin = true;
         }
@@ -50,6 +58,15 @@ class LoginOAuth2ExtrasPlugin extends Plugin
         }
 
         $this->addEnabledProviders();
+    }
+
+    /**
+     * [onOAuth2ProvidersRegister] Add the extra providers to the admin-mode
+     * OAuth2 service the admin-next SSO bridge builds for `/api/*` requests.
+     */
+    public function onOAuth2ProvidersRegister(Event $event)
+    {
+        $this->addEnabledProviders($event['oauth2'] ?? null);
     }
 
     /**
@@ -88,21 +105,31 @@ class LoginOAuth2ExtrasPlugin extends Plugin
         }
     }
 
-    protected function addEnabledProviders()
+    /**
+     * @param \Grav\Plugin\Login\OAuth2\OAuth2|null $oauth2 Service to register into;
+     *                                                      defaults to the global one.
+     */
+    protected function addEnabledProviders($oauth2 = null)
     {
-        if (isset($this->grav['oauth2'])) {
-            $oauth2 = $this->grav['oauth2'];
-
-            if ($this->admin) {
-                $providers = $this->config->get('plugins.login-oauth2-extras.admin.providers', []);
-            } else {
-                $providers = $this->config->get('plugins.login-oauth2-extras.providers', []);
+        if (null === $oauth2) {
+            if (!isset($this->grav['oauth2'])) {
+                return;
             }
+            $oauth2 = $this->grav['oauth2'];
+        }
 
-            foreach ($providers as $provider => $options) {
-                if ($options['enabled']) {
-                    $oauth2->addProvider($provider, $options);
-                }
+        // Take the admin/frontend split from the service itself rather than our
+        // own flag — the provider classes resolve their config subtree the same
+        // way, and the two disagree on `/api/*` routes where `isAdmin()` lies.
+        if ($oauth2->isAdmin()) {
+            $providers = $this->config->get('plugins.login-oauth2-extras.admin.providers', []);
+        } else {
+            $providers = $this->config->get('plugins.login-oauth2-extras.providers', []);
+        }
+
+        foreach ((array) $providers as $provider => $options) {
+            if (!empty($options['enabled'])) {
+                $oauth2->addProvider($provider, $options);
             }
         }
     }

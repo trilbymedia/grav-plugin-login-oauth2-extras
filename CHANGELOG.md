@@ -1,3 +1,11 @@
+# v2.2.2
+## 08/13/2026
+
+1. [](#bugfix)
+    * Fixed Keycloak and the other extra providers never showing up on the new admin's login screen ([#13](https://github.com/trilbymedia/grav-plugin-login-oauth2-extras/issues/13)). Requires Login OAuth2 2.2.8.
+    * Fixed providers reading their credentials from the site config instead of the admin config when signing in to the new admin.
+    * Fixed a PHP warning when a configured provider has no `enabled` setting.
+
 # v2.2.1
 ## 04/30/2026
 
