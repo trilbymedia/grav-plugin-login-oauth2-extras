@@ -48,6 +48,17 @@ class KeycloakProvider extends ExtraProvider
             'keycloak'   => $data,
         ];
 
+        $getGroups = $this->config->get('providers.keycloak.options.get_groups');
+        if ($getGroups)
+        {
+            $groups = $data[$this->config->get('providers.keycloak.userdata_groups')];
+            $groupsReplaceDash = function($value): string {
+                return str_replace('/', '_', $value);
+            };
+            $groups = array_map($groupsReplaceDash,$groups);
+            $data_user['groups'] = $groups;
+        }
+
         return $data_user;
     }
 }

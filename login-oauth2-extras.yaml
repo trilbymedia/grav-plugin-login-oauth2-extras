@@ -55,9 +55,11 @@ providers:
     client_secret: ''
     options:
       scope: ['users']
+      get_groups: false
     userdata_login: ''
     userdata_fullname: ''
     userdata_email: ''
+    userdata_groups: ''
   okta:
       enabled: false
       client_id:
@@ -124,9 +126,11 @@ admin:
       client_secret: ''
       options:
         scope: ['users']
+        get_groups: false
       userdata_login: ''
       userdata_fullname: ''
       userdata_email: ''
+      userdata_groups: ''
     okta:
       enabled: false
       client_id:

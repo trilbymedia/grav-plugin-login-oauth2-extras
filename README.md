@@ -93,9 +93,11 @@ providers:
     client_secret: ''
     options:
       scope: ['users']
+      get_groups: false
     userdata_login: ''
     userdata_fullname: ''
     userdata_email: ''
+    userdata_groups: ''
   okta:
     enabled: false
     client_id:
@@ -163,9 +165,11 @@ admin:
       client_secret: ''
       options:
         scope: ['users']
+        get_groups: false
       userdata_login: ''
       userdata_fullname: ''
       userdata_email: ''
+      userdata_groups: ''
     okta:
       enabled: false
       client_id:
@@ -258,9 +262,11 @@ Note that if you use the admin plugin, a file with your configuration, and named
 |encryption_algorithm| The **Encryption Algorithm** to be used, if your Keycloak instance is configured to use encryption. |`<string>` \| e.g. `RS256` |
 |encryption_key| The contents of your public key or certificate that should be used for decryption, if your Keycloak instance is configured to use encryption. |`<string>` |
 |scope|An array of strings that define the OAuth2 scope. These can enable retrieving more data, but often require more permissions | e.g. `['users']` |
+|get_groups|Add all the groups from Keycloak to the users, which syncs existing groups from keycloak with existing groups in Grav (and removes all non synced groups!). This needs the corresponding claim key and potentially a 'groups' scope. Also all `/` characters will be replaced by `_` to support full group paths.| `true` \| [default: `false`] |
 |userdata_login| The **Login** key of the Keycloak user data.|`<string>` |
 |userdata_fullname| The user's **full name** key of the Keycloak user data.|`<string>` \| e.g. `name` |
 |userdata_email| The user's **email address** key of the Keycloak user data.|`<string>` \| e.g. `email` |
+|userdata_groups| The users's **groups** key of the Keycloak user data.|`<string>` \| e.g. `groups` |
 
 #### Okta
 
