@@ -62,3 +62,12 @@
     background: #9ba9bd;
 }
 
+.form-oauth2 button.wordpress {
+    background: #117ac9;
+    color: #fff;
+}
+.form-oauth2 button.wordpress:hover {
+    background: #0e64a5;
+}
+
+
